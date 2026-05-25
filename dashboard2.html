@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Core | Stackly</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-cyber: #08020f;
+            --neon-red: #ff0055;
+            --cyber-purple: #1a0933;
+            --border: rgba(255, 0, 85, 0.25);
+            --text-white: #fff;
+            --text-gray: #a894b5;
+            --chart-c1: #ff0055;
+            --chart-c2: #ffcc00;
+            --chart-c3: #00ff66;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: radial-gradient(circle at top right, #12031a 0%, var(--bg-cyber) 100%);
+            color: var(--text-white);
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: rgba(8, 2, 15, 0.9);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 25px 15px;
+            position: fixed;
+            height: 100vh;
+            transition: 0.3s;
+            z-index: 100;
+            left: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-family: 'Orbitron';
+            font-size: 1.5rem;
+            color: var(--text-white);
+            margin-bottom: 40px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .nav-item {
+            padding: 12px 15px;
+            cursor: pointer;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            font-size: 0.9rem;
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        .nav-item i {
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background: rgba(255, 0, 85, 0.1);
+            color: var(--neon-red);
+            border-left: 4px solid var(--neon-red);
+        }
+
+        .nav-item:hover i {
+            transform: scale(1.2);
+        }
+
+        .logout-btn {
+            background: rgba(255, 0, 85, 0.1);
+            border: 1px solid var(--neon-red);
+            color: var(--neon-red);
+            padding: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.3s;
+            width: 100%;
+            font-family: 'Orbitron';
+            font-weight: 700;
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        .logout-btn:hover {
+            background: var(--neon-red);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 260px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 260px);
+            transition: 0.3s;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        .dashboard-badge {
+            font-size: 0.7rem;
+            color: var(--bg-cyber);
+            background: var(--neon-red);
+            padding: 4px 8px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 8px;
+            box-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+        }
+
+        .welcome-text h2 {
+            font-family: 'Orbitron';
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .welcome-text h2 span {
+            color: var(--neon-red);
+        }
+
+        .welcome-text p {
+            color: var(--text-gray);
+            font-family: 'Orbitron';
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        .tools {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 0, 85, 0.05);
+            padding: 8px 15px;
+            border: 1px solid var(--border);
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            color: var(--neon-red);
+            border-radius: 6px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--neon-red);
+            cursor: pointer;
+        }
+
+        .tab-content {
+            display: none;
+            animation: glitchIn 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        @keyframes glitchIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .cyber-card {
+            background: linear-gradient(135deg, rgba(26, 9, 51, 0.9), rgba(8, 2, 15, 0.9));
+            border: 1px solid var(--border);
+            padding: 25px;
+            transition: 0.3s;
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cyber-card:hover {
+            border-color: var(--neon-red);
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-family: 'Orbitron';
+            color: var(--neon-red);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .grid-half {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .stat-card h3 {
+            font-family: 'Orbitron';
+            font-size: 2.2rem;
+            color: var(--neon-red);
+            text-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+            margin: 0;
+        }
+
+        .stat-card p {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .chart-container {
+            height: 180px;
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            padding-top: 20px;
+            border-bottom: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+            padding-left: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, rgba(255, 0, 85, 0.2), var(--neon-red));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: 0.5s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .bar:hover {
+            filter: brightness(1.3);
+        }
+
+        .bar::after {
+            content: attr(data-val);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: 0.3s;
+            font-family: 'Orbitron';
+            color: var(--text-white);
+        }
+
+        .bar:hover::after {
+            opacity: 1;
+            top: -20px;
+        }
+
+        .pie-chart-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        .pie-chart {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: conic-gradient(var(--chart-c1) 0% 55%, var(--chart-c2) 55% 85%, var(--chart-c3) 85% 100%);
+            position: relative;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo-img {
+            height: 38px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-link:hover .brand-logo-img {
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
+
+        @media (max-width: 768px) {
+            .brand-logo-img {
+                height: 30px;
+            }
+        }
+
+        .pie-chart::after {
+            content: '';
+            width: 90px;
+            height: 90px;
+            background: #0c0416;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .pie-chart i {
+            position: relative;
+            z-index: 2;
+            font-size: 1.5rem;
+            color: var(--text-white);
+        }
+
+        .pie-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 500px;
+        }
+
+        th {
+            text-align: left;
+            padding: 12px;
+            font-family: 'Orbitron';
+            color: var(--text-gray);
+            border-bottom: 1px solid var(--border);
+            font-size: 0.75rem;
+            background: rgba(255, 0, 85, 0.05);
+        }
+
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid rgba(255, 0, 85, 0.1);
+        }
+
+        .status {
+            padding: 4px 8px;
+            font-size: 0.65rem;
+            font-family: 'Orbitron';
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+
+        .status.online {
+            background: rgba(0, 255, 102, 0.1);
+            color: #00ff66;
+            border: 1px solid rgba(0, 255, 102, 0.3);
+        }
+
+        .status.match {
+            background: rgba(255, 204, 0, 0.1);
+            color: #ffcc00;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                left: -260px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .grid-2,
+            .grid-half {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .tools {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">
+            <a href="dashboard2.html" class="logo-link">
+                <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+            </a>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="switchTab('players', this)"><i class="fa-solid fa-users"></i>
+                <span>Players</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('analytics', this)"><i class="fa-solid fa-chart-pie"></i>
+                <span>Analytics</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('tournaments', this)"><i class="fa-solid fa-sitemap"></i>
+                <span>Tournaments</span>
+            </li>
+            <li class="nav-item" onclick="switchTab('reports', this)"><i class="fa-solid fa-file-contract"></i>
+                <span>Reports</span>
+            </li>
+        </ul>
+        <button class="logout-btn" onclick="window.location.href='login.html'"><i class="fa-solid fa-power-off"></i>
+            <span>SYS_LOGOUT</span></button>
+    </aside>
+
+    <main class="main-content">
+        <div class="top-bar">
+            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                <i class="fa-solid fa-bars mobile-toggle" style="margin-top: 5px;" onclick="toggleSidebar()"></i>
+                <div class="welcome-text">
+                    <span class="dashboard-badge">ADMIN CORE</span>
+                    <h2>Hi <span id="displayAdminName">Admin</span> 👑</h2>
+                    <p>ROOT_ACCESS // AUTHORIZED</p>
+                </div>
+            </div>
+            <div class="tools">
+                <div class="profile">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span id="displayAdminEmail">admin@stackly.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="players" class="tab-content active">
+
+            <div class="grid-3">
+                <div class="cyber-card stat-card">
+                    <h3 class="counter" data-target="84210">0</h3>
+                    <p>Active Players</p>
+                </div>
+                <div class="cyber-card stat-card">
+                    <h3 class="counter" data-target="145">0</h3>
+                    <p>Banned Nodes</p>
+                </div>
+                <div class="cyber-card stat-card">
+                    <h3 class="counter" data-target="342">0</h3>
+                    <p>Support Tickets</p>
+                </div>
+            </div>
+
+            <div class="cyber-card">
+                <h3 class="section-title"><i class="fa-solid fa-users-gear"></i> User Management Matrix</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th>Gamer Tag</th>
+                            <th>Platform</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>AlphaWarrior</td>
+                            <td>PC</td>
+                            <td><span class="status online">ONLINE</span></td>
+                            <td><i class="fa-solid fa-ban" style="color:var(--neon-red); cursor:pointer;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>ShadowNinja</td>
+                            <td>Console</td>
+                            <td><span class="status match">IN_MATCH</span></td>
+                            <td><i class="fa-solid fa-ban" style="color:var(--neon-red); cursor:pointer;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>RogueEcho</td>
+                            <td>Mobile</td>
+                            <td><span class="status online">ONLINE</span></td>
+                            <td><i class="fa-solid fa-ban" style="color:var(--neon-red); cursor:pointer;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>CyberPunk99</td>
+                            <td>PC</td>
+                            <td><span class="status match">IN_MATCH</span></td>
+                            <td><i class="fa-solid fa-ban" style="color:var(--neon-red); cursor:pointer;"></i></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="analytics" class="tab-content">
+
+            <div class="grid-2">
+                <div class="cyber-card">
+                    <h3 class="section-title"><i class="fa-solid fa-chart-area"></i> Weekly Traffic Flow</h3>
+                    <div class="chart-container">
+                        <div class="bar" style="height: 30%;" data-val="12k"></div>
+                        <div class="bar" style="height: 50%;" data-val="25k"></div>
+                        <div class="bar" style="height: 80%;" data-val="40k"></div>
+                        <div class="bar" style="height: 40%;" data-val="18k"></div>
+                        <div class="bar" style="height: 100%;" data-val="55k"></div>
+                        <div class="bar" style="height: 60%;" data-val="32k"></div>
+                        <div class="bar" style="height: 85%;" data-val="45k"></div>
+                    </div>
+                </div>
+
+                <div class="cyber-card">
+                    <h3 class="section-title"><i class="fa-solid fa-gamepad"></i> Platform Usage</h3>
+                    <div class="pie-chart-wrapper">
+                        <div class="pie-chart">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                        <div class="pie-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--chart-c1);"></div> PC Gaming (55%)
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--chart-c2);"></div> Consoles (30%)
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--chart-c3);"></div> Mobile (15%)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-half">
+                <div class="cyber-card">
+                    <h3 class="section-title"><i class="fa-solid fa-server"></i> Server Node Ping</h3>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:10px 0; font-size:0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <span>US-East Cluster</span><span style="color:#00ff66; font-family:'Orbitron';">12ms</span>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:10px 0; font-size:0.85rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <span>EU-West Cluster</span><span style="color:#00ff66; font-family:'Orbitron';">24ms</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; padding:10px 0; font-size:0.85rem;">
+                        <span>AS-South Cluster</span><span style="color:#ffcc00; font-family:'Orbitron';">85ms</span>
+                    </div>
+                </div>
+
+                <div class="cyber-card" style="justify-content: center; align-items: center; text-align: center;">
+                    <i class="fa-solid fa-shield-check fa-4x" style="color: #00ff66; margin-bottom: 15px;"></i>
+                    <h3 style="font-family: 'Orbitron'; font-size: 1.2rem;">System Optimal</h3>
+                    <p style="color: var(--text-gray); font-size: 0.85rem; margin-top: 5px;">No active DDoS threats
+                        detected.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tournaments" class="tab-content">
+            <div class="cyber-card" style="background: linear-gradient(45deg, rgba(255,0,85,0.1), rgba(26,9,51,0.8));">
+                <h3 class="section-title" style="border:none; margin:0;">Nexus Cyber Cup Final</h3>
+                <div
+                    style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top: 10px;">
+                    <p style="color: var(--text-gray); font-size: 0.9rem;">Prize Pool: <span
+                            style="color:var(--neon-red); font-size:1.2rem; font-family:'Orbitron';">$50,000</span></p>
+                    <span
+                        style="background: var(--neon-red); padding: 5px 15px; border-radius: 4px; font-family: 'Orbitron'; font-size: 0.8rem; font-weight:700;">LIVE
+                        NOW</span>
+                </div>
+            </div>
+
+            <div class="grid-half">
+                <div class="cyber-card">
+                    <h3 class="section-title"><i class="fa-solid fa-calendar-days"></i> Match Schedule</h3>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:0.85rem;">
+                        <span>Alpha vs Omega</span><span style="color:var(--neon-red); font-family:'Orbitron';">18:00
+                            EST</span>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:0.85rem;">
+                        <span>Titans vs Rogue</span><span style="color:var(--neon-red); font-family:'Orbitron';">19:30
+                            EST</span>
+                    </div>
+                    <div style="display:flex; justify-content:space-between; padding:12px 0; font-size:0.85rem;">
+                        <span>Delta Force vs Echo</span><span
+                            style="color:var(--neon-red); font-family:'Orbitron';">21:00 EST</span>
+                    </div>
+                </div>
+
+                <div class="cyber-card"
+                    style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=500&q=80') center/cover;">
+                    <h3 class="section-title" style="border:none;">Global Skirmish v2</h3>
+                    <p style="font-size:0.85rem; color:var(--text-gray); margin-bottom: 20px;">Registrations are closing
+                        soon for the next global event.</p>
+                    <button
+                        style="background:rgba(255,0,85,0.2); border:1px solid var(--neon-red); color:var(--neon-red); padding:10px; font-family:'Orbitron'; font-weight:700; cursor:pointer; width:100%; border-radius:4px;"
+                        onclick="window.location.href='404page.html'">MANAGE
+                        BRACKETS</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="reports" class="tab-content">
+            <div class="grid-3">
+                <div class="cyber-card stat-card" style="align-items:center; text-align:center;"><i
+                        class="fa-solid fa-file-invoice-dollar" style="font-size:2.5rem; color:var(--neon-red);"></i>
+                    <h4 style="margin-top:15px; font-family:'Orbitron'; font-size:1.1rem;">Financial Logs</h4>
+                    <p>Q3 Revenue Export</p>
+                </div>
+                <div class="cyber-card stat-card" style="align-items:center; text-align:center;"><i
+                        class="fa-solid fa-users-rectangle" style="font-size:2.5rem; color:var(--neon-red);"></i>
+                    <h4 style="margin-top:15px; font-family:'Orbitron'; font-size:1.1rem;">Player Retention</h4>
+                    <p>Monthly Churn Rate</p>
+                </div>
+                <div class="cyber-card stat-card" style="align-items:center; text-align:center;"><i
+                        class="fa-solid fa-bug" style="font-size:2.5rem; color:var(--neon-red);"></i>
+                    <h4 style="margin-top:15px; font-family:'Orbitron'; font-size:1.1rem;">Crash Reports</h4>
+                    <p>Client side errors</p>
+                </div>
+            </div>
+            <div class="cyber-card" style="text-align:center; padding: 40px 20px;">
+                <h3 class="section-title" style="border:none; justify-content:center;">Generate Custom Analytics Report
+                </h3>
+                <button
+                    style="background:var(--neon-red); border:none; color:#fff; padding:15px 30px; font-family:'Orbitron'; font-weight:700; cursor:pointer; clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px); margin-top: 10px; font-size: 1rem;"
+                    onclick="window.location.href='404page.html'"><i class="fa-solid fa-download"></i> DOWNLOAD
+                    .CSV</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const userEmail = urlParams.get('email');
+
+            if (userEmail) {
+                document.getElementById('displayAdminEmail').innerText = userEmail;
+                let namePart = userEmail.split('@')[0];
+                namePart = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+                document.getElementById('displayAdminName').innerText = namePart;
+            }
+
+            runCounters();
+        });
+
+        function toggleSidebar() { document.getElementById('sidebar').classList.toggle('active'); }
+
+        function switchTab(tabId, element) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+
+            if (window.innerWidth <= 992) { document.getElementById('sidebar').classList.remove('active'); }
+            if (tabId === 'players' || tabId === 'analytics') runCounters(); 
+        }
+
+        function runCounters() {
+            document.querySelectorAll('.counter').forEach(counter => {
+                counter.innerText = '0';
+                const target = +counter.getAttribute('data-target');
+                const start = performance.now();
+                function update(time) {
+                    const prog = Math.min((time - start) / 1000, 1);
+                    let val = Math.floor((1 - Math.pow(1 - prog, 4)) * target);
+                    counter.innerText = val.toLocaleString();
+                    if (prog < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+    </script>
+</body>
+
+</html>

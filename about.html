@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us | Stackly Gaming</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-scanner-box">
+            <div class="preloader-circle-radar"></div>
+            <div class="brand-text-matrix">
+                <i class="fa-solid fa-layer-group preloader-neon-icon"></i>
+                <h1 class="preloader-glitch-text">STACKLY</h1>
+                <p class="preloader-sub">INITIALIZING NODE SYSTEM...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" class="app-hidden">
+
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <div class="nav-menu-wrapper" id="menuWrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    </li>
+                    <li><a href="about.html" class="nav-item active"><i class="fa-solid fa-circle-info"></i><span>About
+                                Us</span></a></li>
+                    <li><a href="service.html" class="nav-item"><i
+                                class="fa-solid fa-gamepad"></i><span>Services</span></a></li>
+                    <li><a href="blog.html" class="nav-item"><i class="fa-solid fa-newspaper"></i><span>Blog</span></a>
+                    </li>
+                    <li><a href="contact.html" class="nav-item"><i
+                                class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+                <button class="login-btn" onclick="window.location.href='login.html'">LOGIN</button>
+            </div>
+
+            <div class="nav-right-controls">
+                <div class="burger" id="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="about-hero-pro" id="aboutHero">
+
+            <canvas id="particleCanvas" class="hero-particles"></canvas>
+            <div class="about-hero-overlay"></div>
+
+            <div class="about-hero-container">
+
+                <div class="about-hero-content">
+
+                    <div class="breadcrumb-pro" data-aos="fade-down" data-aos-duration="800">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-angles-right"></i>
+                        <span class="active">About</span>
+                    </div>
+
+                    <h3 class="gold-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">BUILT
+                        FOR TRUE GAMERS</h3>
+                    <h1 class="neon-heading" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">WELCOME
+                        TO THE ULTIMATE <br><span class="text-gold">GAMING ARENA</span></h1>
+
+                    <p class="hero-desc" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                        <strong>About Our Gaming World:</strong> Step into a universe where performance meets passion.
+                        We are forging the future of competitive gaming with zero lag, elite matchmaking, and a
+                        community of hardcore gamers.
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <a href="404page.html" class="btn-glow-explore">
+                            <span>EXPLORE GAMES</span> <i class="fa-solid fa-gamepad"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-hero-visual" data-aos="zoom-in-left" data-aos-delay="500" data-aos-duration="1200">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                        alt="3D Gamer Character" class="floating-character">
+                    <div class="visual-glow"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="story-section" id="story">
+            <div class="story-container">
+
+                <div class="story-visual" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="story-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80"
+                            alt="Gaming Setup" class="story-img main-img">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80"
+                            alt="Esports Arena" class="story-img sub-img floating-img">
+                        <div class="story-glow"></div>
+                    </div>
+                </div>
+
+                <div class="story-content" data-aos="fade-left" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">THE STORY BEHIND THE PLATFORM</h3>
+                    <h2 class="section-title">OUR GAMING <span class="text-gold">JOURNEY</span></h2>
+                    <p class="section-desc">
+                        From a small server setup to a global unified gaming infrastructure, we have built a haven where
+                        performance meets passion. Built for true gamers.
+                    </p>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-story-card">
+                                <span class="timeline-year">2024</span>
+                                <h4>The Core Spark</h4>
+                                <p>Started as a vision to eliminate lag and connect casual squads across broken
+                                    platforms globally.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-story-card">
+                                <span class="timeline-year">2025</span>
+                                <h4>Alpha Infrastructure</h4>
+                                <p>Deployed high-speed nodes in major regions, onboarding our first 10K+ active beta
+                                    users with zero frame drops.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="timeline-dot"></div>
+                            <div class="glass-story-card">
+                                <span class="timeline-year">2026</span>
+                                <h4>Ultimate Gaming Arena</h4>
+                                <p>Evolved into a premium ecosystem power-hosting global pro tournaments with massive
+                                    reward pools.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="mission-vision-section" id="missionVision">
+            <div class="mv-container">
+
+                <div class="mv-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">CORE PURPOSE</h3>
+                    <h2 class="section-title">CREATING <span class="text-gold">NEXT-LEVEL EXPERIENCES</span></h2>
+                </div>
+
+                <div class="mv-cards-wrapper">
+
+                    <div class="neon-card" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-bolt animated-icon"></i>
+                        </div>
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-desc">
+                            To empower every gamer with flawless, high-performance infrastructure. We strive to break
+                            barriers in cross-platform connectivity and deliver zero-latency competitive environments
+                            for global squads.
+                        </p>
+                    </div>
+
+                    <div class="neon-card" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+                        <div class="card-icon-box">
+                            <i class="fa-solid fa-vr-cardboard animated-icon"></i>
+                        </div>
+                        <h3 class="card-title">Vision For Future Gaming</h3>
+                        <p class="card-desc">
+                            To become the undisputed backbone of world-class esports. We envision a unified gaming
+                            ecosystem where boundaries blur, and raw skill is the only metric that truly matters.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="features-section" id="features">
+            <div class="features-container">
+
+                <div class="features-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">WHY CHOOSE US</h3>
+                    <h2 class="section-title">EVERYTHING A GAMER <span class="text-gold">NEEDS</span></h2>
+                    <p class="section-desc" style="max-width: 600px; margin: 15px auto 50px;">
+                        We provide top-tier gaming features designed to give you the ultimate competitive edge.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+
+                    <div class="feature-card-wrapper" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h4>Multiplayer Support</h4>
+                            <p>Connect with millions of players worldwide. Form squads, build guilds, and dominate the
+                                leaderboards together.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card-wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <h4>Live Tournaments</h4>
+                            <p>Compete in daily and weekly pro tournaments with massive prize pools and exclusive
+                                community rewards.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card-wrapper" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h4>Fast Matchmaking</h4>
+                            <p>Zero wait time. Our optimized algorithm pairs you with players of equal skill levels in
+                                mere seconds.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card-wrapper" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-card">
+                            <div class="feature-icon-box">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <h4>Reward System</h4>
+                            <p>Earn points for every victory. Unlock rare skins, premium avatars, and VIP access passes
+                                seamlessly.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="team-section" id="team">
+            <div class="team-container">
+
+                <div class="team-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">BEHIND THE PLATFORM</h3>
+                    <h2 class="section-title">THE GAMING <span class="text-gold">CREATORS</span></h2>
+                    <p class="section-desc" style="max-width: 600px; margin: 15px auto 50px;">
+                        Meet the tech wizards and ex-pro gamers who built this ultimate competitive arena.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80"
+                                        alt="Founder">
+                                </div>
+                                <h4>Alex "Viper" Mercer</h4>
+                                <p class="team-role">Founder & CEO</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>Alex "Viper" Mercer</h4>
+                                <p class="bio">Ex-Pro Gamer turned tech visionary. Leading Stackly to global dominance.
+                                </p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-discord"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80"
+                                        alt="CTO">
+                                </div>
+                                <h4>Sarah "Nova" Chen</h4>
+                                <p class="team-role">Lead Architect (CTO)</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>Sarah "Nova" Chen</h4>
+                                <p class="bio">The genius behind our zero-latency matchmaking algorithm and server tech.
+                                </p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-github"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-twitch"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80"
+                                        alt="Lead Design">
+                                </div>
+                                <h4>Marcus "Ghost" Wright</h4>
+                                <p class="team-role">Head of UX/UI</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>Marcus "Ghost" Wright</h4>
+                                <p class="bio">Crafting immersive and visually stunning interfaces for the true gamers.
+                                </p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-dribbble"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-discord"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+                                        alt="Head of Infra">
+                                </div>
+                                <h4>David "Ping" Martinez</h4>
+                                <p class="team-role">Head of Infrastructure</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>David "Ping" Martinez</h4>
+                                <p class="bio">The network wizard keeping our servers running at 99.9% uptime with zero
+                                    packet loss.</p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                                        alt="Esports Director">
+                                </div>
+                                <h4>Elena "Valkyrie" Rostova</h4>
+                                <p class="team-role">Esports Director</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>Elena "Valkyrie" Rostova</h4>
+                                <p class="bio">Managing our global tournaments and bringing the best pro squads to the
+                                    Stackly arena.</p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-twitch"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-discord"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="team-card-inner">
+                            <div class="team-front">
+                                <div class="team-img-box">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+                                        alt="Security Lead">
+                                </div>
+                                <h4>Kenji "Ronin" Sato</h4>
+                                <p class="team-role">Lead Security Engineer</p>
+                            </div>
+                            <div class="team-back">
+                                <h4>Kenji "Ronin" Sato</h4>
+                                <p class="bio">Building impenetrable anti-cheat systems. He ensures every match is fair,
+                                    secure, and competitive.</p>
+                                <div class="team-social">
+                                    <a href="404page.html"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="404page.html"><i class="fa-solid fa-shield-halved"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="split-testi-section" id="reviews">
+            <div class="split-testi-container">
+
+                <div class="split-testi-visual" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="visual-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+                            alt="Pro Gamer" class="gamer-main-img">
+                        <div class="visual-glow-bg"></div>
+
+                        <div class="floating-badge">
+                            <i class="fa-solid fa-star"></i>
+                            <span>4.9/5 Player Rating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="split-testi-content" data-aos="fade-left" data-aos-duration="1000">
+                    <i class="fa-solid fa-quote-right bg-quote-anim"></i>
+
+                    <h3 class="gold-subtitle">COMMUNITY REVIEWS</h3>
+                    <h2 class="section-title">WHAT PROS <span class="text-gold">ARE SAYING</span></h2>
+
+                    <div class="review-box">
+
+                        <div class="review-item active" id="review-1">
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="review-text">"Stackly completely changed how my squad competes. The zero-latency
+                                servers and intuitive matchmaking mean we spend less time waiting and more time
+                                winning."</p>
+                            <div class="reviewer-info">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                                    alt="User Avatar" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">Samantha "Rogue" Miles</h4>
+                                    <span class="reviewer-handle">@rogue_assassin</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-item" id="review-2">
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review-text">"The built-in anti-cheat system is the best I've ever seen. Finally,
+                                a platform where pure skill actually dictates the leaderboards. A must-have for pro
+                                gamers!"</p>
+                            <div class="reviewer-info">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+                                    alt="User Avatar" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">David "Striker" Chen</h4>
+                                    <span class="reviewer-handle">@striker_pro</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-item" id="review-3">
+                            <div class="star-rating">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="review-text">"Hosting global tournaments used to be a nightmare with server
+                                crashes. Since moving to Stackly's infrastructure, everything is buttery smooth."</p>
+                            <div class="reviewer-info">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+                                    alt="User Avatar" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">Mike "Titan" Ross</h4>
+                                    <span class="reviewer-handle">@titan_esports</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review-controls-wrapper">
+                            <button class="slider-arrow" onclick="prevReview()"><i
+                                    class="fa-solid fa-chevron-left"></i></button>
+
+                            <div class="review-controls">
+                                <span class="slider-dot active" onclick="changeReview(1)"></span>
+                                <span class="slider-dot" onclick="changeReview(2)"></span>
+                                <span class="slider-dot" onclick="changeReview(3)"></span>
+                            </div>
+
+                            <button class="slider-arrow" onclick="nextReview()"><i
+                                    class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="cta-section" id="joinCommunity">
+
+            <div class="floating-icons-bg">
+                <i class="fa-solid fa-gamepad float-icon icon-1"></i>
+                <i class="fa-solid fa-headset float-icon icon-2"></i>
+                <i class="fa-solid fa-crosshairs float-icon icon-3"></i>
+                <i class="fa-solid fa-vr-cardboard float-icon icon-4"></i>
+                <i class="fa-solid fa-ghost float-icon icon-5"></i>
+                <i class="fa-brands fa-playstation float-icon icon-6"></i>
+            </div>
+
+            <div class="cta-container" data-aos="zoom-in" data-aos-duration="1000">
+                <h3 class="gold-subtitle">BECOME PART OF OUR GAMING WORLD</h3>
+                <h2 class="section-title neon-title">READY TO JOIN THE <span class="text-gold">BATTLE?</span></h2>
+                <p class="section-desc cta-desc">
+                    Start your gaming adventure today. Experience zero lag, elite matchmaking, and a massive community
+                    of hardcore gamers waiting for your squad.
+                </p>
+
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <a href="404page.html" class="btn-glow-primary">
+                        Join Now <i class="fa-solid fa-gamepad"></i>
+                    </a>
+                    <a href="404page.html" class="btn-glow-secondary">
+                        Explore Games <i class="fa-solid fa-bolt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cyber-grid-overlay"></div>
+        </section>
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-col" data-aos="fade-up">
+                <a href="index.html" class="footer-logo">
+                    <h1 class="logo-text">STACK<span class="text-gold">LY</span></h1>
+                </a>
+                <p class="footer-desc">The ultimate gaming ecosystem. Experience elite matchmaking, real-time stats, and
+                    professional tournament infrastructure.</p>
+                <div class="social-links">
+                    <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>Platform</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#stats">Service</a></li>
+                    <li><a href="#reviews">Blog</a></li>
+                    <li><a href="#about">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Support</h3>
+                <ul class="contact-info">
+                    <li><i class="far fa-envelope"></i> <span>support@stackly.gaming</span></li>
+                    <li><i class="fas fa-location-dot"></i> <span>Salem City, Tamil Nadu</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Newsletter</h3>
+                <p>Get exclusive drops & tournament alerts.</p>
+                <form class="footer-form" onsubmit="event.preventDefault(); validateAndRedirect();">
+                    <input type="email" id="footerEmail" placeholder="Enter gaming email" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright-text">© 2026 Stackly Gaming. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Terms & Conditions</a>
+                    <span class="divider">|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        function validateAndRedirect() {
+            const emailInput = document.getElementById('footerEmail');
+
+            // ஈமெயில் ஃபீல்டு காலியா இல்லாம, வேலிடா இருந்தா மட்டும் 404 பேஜுக்கு போகும்
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+        let currentReview = 1;
+        const totalReviews = 3;
+
+        function updateSlider() {
+            // Hide all reviews and remove active dots
+            document.querySelectorAll('.review-item').forEach(r => r.classList.remove('active'));
+            document.querySelectorAll('.slider-dot').forEach(d => d.classList.remove('active'));
+
+            // Show clicked review and active dot
+            document.getElementById(`review-${currentReview}`).classList.add('active');
+            document.querySelectorAll('.slider-dot')[currentReview - 1].classList.add('active');
+        }
+
+        function changeReview(index) {
+            currentReview = index;
+            updateSlider();
+        }
+
+        function nextReview() {
+            currentReview = (currentReview === totalReviews) ? 1 : currentReview + 1;
+            updateSlider();
+        }
+
+        function prevReview() {
+            currentReview = (currentReview === 1) ? totalReviews : currentReview - 1;
+            updateSlider();
+        }
+    </script>
+</body>
+
+</html>

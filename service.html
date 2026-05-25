@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us | Stackly Gaming</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-scanner-box">
+            <div class="preloader-circle-radar"></div>
+            <div class="brand-text-matrix">
+                <i class="fa-solid fa-layer-group preloader-neon-icon"></i>
+                <h1 class="preloader-glitch-text">STACKLY</h1>
+                <p class="preloader-sub">INITIALIZING NODE SYSTEM...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" class="app-hidden">
+
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <div class="nav-menu-wrapper" id="menuWrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    </li>
+                    <li><a href="about.html" class="nav-item"><i class="fa-solid fa-circle-info"></i><span>About
+                                Us</span></a></li>
+                    <li><a href="service.html" class="nav-item active"><i
+                                class="fa-solid fa-gamepad"></i><span>Services</span></a></li>
+                    <li><a href="blog.html" class="nav-item"><i class="fa-solid fa-newspaper"></i><span>Blog</span></a>
+                    </li>
+                    <li><a href="contact.html" class="nav-item"><i
+                                class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+                <button class="login-btn" onclick="window.location.href='login.html'">LOGIN</button>
+            </div>
+
+            <div class="nav-right-controls">
+                <div class="burger" id="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="service-hero-cyber" id="serviceHero">
+
+            <div class="cyber-gradient-bg"></div>
+
+            <canvas id="particleCanvas" class="hero-particles"></canvas>
+
+            <div class="service-hero-container">
+
+                <div class="service-hero-content">
+
+                    <div class="breadcrumb-transparent" data-aos="fade-down" data-aos-duration="800">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-angles-right"></i>
+                        <span class="active">Services</span>
+                    </div>
+
+                    <h3 class="gold-subtitle" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">POWER
+                        UP YOUR GAMING WORLD</h3>
+                    <h1 class="neon-heading" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                        ULTIMATE <br><span class="text-gold">GAMING SERVICES</span>
+                    </h1>
+                    <p class="hero-desc" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                        Experience Next-Level Gaming with our premium infrastructure, zero-latency servers, and elite
+                        matchmaking designed for true gamers.
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        <a href="404page.html" class="btn-cyber-glow">
+                            <span class="btn-inner">Explore Services <i class="fa-solid fa-bolt"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-hero-visual" data-aos="zoom-in-left" data-aos-delay="500" data-aos-duration="1200">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                        alt="3D Gamer Illustration" class="floating-3d-character">
+                    <div class="visual-glow-cyber"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="multiplayer-section" id="multiplayer">
+            <div class="mp-container">
+
+                <div class="mp-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">ONLINE MATCH ARENA</h3>
+                    <h2 class="section-title">MULTIPLAYER <span class="text-gold">BATTLES</span></h2>
+                    <p class="section-desc">
+                        Play with gamers worldwide. Form your ultimate squad, enter the matchmaking lobby, and dominate
+                        the leaderboards in high-octane FPS battles and MMO arenas.
+                    </p>
+
+                    <div class="lobby-ui-card">
+                        <div class="lobby-header">
+                            <span><i class="fa-solid fa-satellite-dish"></i> Finding Match...</span>
+                            <span class="ping-text">Ping: 12ms</span>
+                        </div>
+
+                        <div class="player-list">
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"
+                                        alt="Player 1">
+                                    <span>Viper_Pro</span>
+                                </div>
+                                <div class="player-status">
+                                    <span class="status-dot neon-green"></span> Ready
+                                </div>
+                            </div>
+
+                            <div class="player-row">
+                                <div class="player-info">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
+                                        alt="Player 2">
+                                    <span>Nova_Sniper</span>
+                                </div>
+                                <div class="player-status">
+                                    <span class="status-dot neon-green"></span> Ready
+                                </div>
+                            </div>
+
+                            <div class="player-row searching-row">
+                                <div class="player-info">
+                                    <div class="empty-avatar"><i class="fa-solid fa-spinner fa-spin"></i></div>
+                                    <span class="text-muted">Searching...</span>
+                                </div>
+                                <div class="player-status">
+                                    <span class="status-dot neon-gold"></span> Waiting
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-cancel-match" onclick="window.location.href='404page.html'">Cancel
+                            Search</button>
+                    </div>
+                </div>
+
+                <div class="mp-visual" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="fps-bg-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506506200949-df873a6e6bc2?auto=format&fit=crop&w=800&q=80"
+                            alt="FPS Battle" class="fps-main-img">
+                        <div class="fps-overlay"></div>
+                    </div>
+
+                    <div class="floating-squad-card squad-card-1">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=300&q=80"
+                            alt="Squad Team">
+                        <div class="card-glow-border"></div>
+                        <div class="card-info">
+                            <span>Alpha Squad</span>
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                    </div>
+
+                    <div class="floating-squad-card squad-card-2">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=300&q=80"
+                            alt="Esports Team">
+                        <div class="card-glow-border"></div>
+                        <div class="card-info">
+                            <span>Elite Ranked</span>
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="esports-section" id="esports">
+            <div class="esports-container">
+
+                <div class="esports-header" data-aos="fade-up">
+                    <h3 class="gold-subtitle">COMPETITIVE GAMING ARENA</h3>
+                    <h2 class="section-title">BATTLE FOR <span class="text-gold">GLORY</span> 🏆</h2>
+                </div>
+
+                <div class="esports-grid">
+
+                    <div class="esports-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-glow"></div>
+                        <div class="tournament-badge">PRO LEAGUE</div>
+                        <div class="card-content">
+                            <h4>Global Valorant Cup</h4>
+                            <div class="countdown-timer" data-time="24:00:00">00:00:00</div>
+                            <p>Prize Pool: <b>$50,000</b></p>
+                            <button class="btn-join" onclick="window.location.href='404page.html'">Join
+                                Tournament</button>
+                        </div>
+                    </div>
+
+                    <div class="esports-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-glow"></div>
+                        <div class="tournament-badge">AMATEUR</div>
+                        <div class="card-content">
+                            <h4>PUBG Mobile Fest</h4>
+                            <div class="countdown-timer" data-time="48:00:00">00:00:00</div>
+                            <p>Prize Pool: <b>$10,000</b></p>
+                            <button class="btn-join" onclick="window.location.href='404page.html'">Join
+                                Tournament</button>
+                        </div>
+                    </div>
+
+                    <div class="esports-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-glow"></div>
+                        <div class="tournament-badge">ELITE</div>
+                        <div class="card-content">
+                            <h4>Dota 2 Championship</h4>
+                            <div class="countdown-timer" data-time="12:30:00">00:00:00</div>
+                            <p>Prize Pool: <b>$100,000</b></p>
+                            <button class="btn-join" onclick="window.location.href='404page.html'">Join
+                                Tournament</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="ls-main-section" id="liveStream">
+            <div class="ls-container">
+
+                <div class="ls-header" data-aos="fade-up">
+                    <h3 class="ls-gold-subtitle">WATCH LIVE GAMEPLAY 🎥</h3>
+                    <h2 class="ls-section-title">LIVE <span class="ls-text-gold">GAMING STREAMS</span></h2>
+                    <p class="ls-section-desc">
+                        Catch your favorite pro players and squads in action. From ranked grinds to grand championships,
+                        witness the intensity in real-time.
+                    </p>
+                </div>
+
+                <div class="ls-grid">
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1593341646782-e0b495c023d6?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 12.5k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>Pro League Finals</h4>
+                            <p>By: GamingStudio_Pro</p>
+                        </div>
+                    </div>
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 8.2k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>FPS Battle Ground</h4>
+                            <p>By: Vortex_Gaming</p>
+                        </div>
+                    </div>
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1614294149090-9c171e21b20a?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 25.1k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>Ranked Grind</h4>
+                            <p>By: Cyber_Ninja</p>
+                        </div>
+                    </div>
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 15.3k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>Speedrun Challenge</h4>
+                            <p>By: Pixel_Master</p>
+                        </div>
+                    </div>
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 9.8k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>Co-op Adventure</h4>
+                            <p>By: Team_Legend</p>
+                        </div>
+                    </div>
+
+                    <div class="ls-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="ls-live-badge">LIVE</div>
+                        <div class="ls-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=400&q=80"
+                                alt="Streamer">
+                            <div class="ls-view-count"><i class="fa-solid fa-eye"></i> 32.4k</div>
+                        </div>
+                        <div class="ls-info">
+                            <h4>Grand Championship</h4>
+                            <p>By: E-Sports Arena</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="rewards-section" id="rewards">
+            <div class="rewards-container">
+
+                <div class="rewards-header" data-aos="fade-up">
+                    <h3 class="gold-subtitle">EXCLUSIVE GAMER BENEFITS 👑</h3>
+                    <h2 class="section-title">UNLOCK <span class="text-gold">GAMING REWARDS</span></h2>
+                </div>
+
+                <div class="rewards-grid">
+                    <div class="reward-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="card-icon rotate-effect"><i class="fa-solid fa-medal"></i></div>
+                        <h4>Silver Pass</h4>
+                        <div class="price">Free</div>
+                        <ul>
+                            <li>Basic Rewards</li>
+                            <li>Community Access</li>
+                        </ul>
+                        <button class="btn-join" onclick="window.location.href='404page.html'">Join Now</button>
+                    </div>
+
+                    <div class="reward-card featured" data-aos="flip-left" data-aos-delay="200">
+                        <div class="ribbon">BEST VALUE</div>
+                        <div class="card-icon rotate-effect"><i class="fa-solid fa-crown"></i></div>
+                        <h4>Gold Membership</h4>
+                        <div class="price">$29<span>/mo</span></div>
+                        <ul>
+                            <li>All Silver Benefits</li>
+                            <li>Exclusive Skins</li>
+                            <li>Priority Access</li>
+                        </ul>
+                        <button class="btn-join active" onclick="window.location.href='404page.html'">Upgrade</button>
+                    </div>
+
+                    <div class="reward-card" data-aos="flip-left" data-aos-delay="300">
+                        <div class="card-icon rotate-effect"><i class="fa-solid fa-gem"></i></div>
+                        <h4>Diamond Pass</h4>
+                        <div class="price">$59<span>/mo</span></div>
+                        <ul>
+                            <li>All Gold Benefits</li>
+                            <li>VIP Tournament Entry</li>
+                            <li>Custom Profile Badge</li>
+                        </ul>
+                        <button class="btn-join" onclick="window.location.href='404page.html'">Get VIP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comm-section" id="community">
+            <div class="comm-container">
+
+                <div class="comm-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">CONNECT WITH PLAYERS 💬</h3>
+                    <h2 class="section-title">GAMING <span class="text-gold">COMMUNITY HUB</span></h2>
+                    <p class="comm-desc">
+                        Join our real-time gamer chat! Find your ultimate squad, share strategies, and discuss the
+                        latest updates in our Discord-style community channels.
+                    </p>
+
+                    <div class="comm-stats-grid">
+                        <div class="comm-stat-box">
+                            <i class="fa-solid fa-users text-gold"></i>
+                            <h4>50K+</h4>
+                            <p>Active Gamers</p>
+                        </div>
+                        <div class="comm-stat-box">
+                            <i class="fa-solid fa-headset text-gold"></i>
+                            <h4>99+</h4>
+                            <p>Live Voice Channels</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-join" style="margin-top: 30px; margin-left: 0;"
+                        onclick="window.location.href='404page.html'">Join Discord Server</button>
+                </div>
+
+                <div class="comm-chat-ui" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="chat-header">
+                        <div class="channel-name"><i class="fa-solid fa-hashtag"></i> global-chat</div>
+                        <div class="online-status"><span class="pulse-dot"></span> 1,245 Online</div>
+                    </div>
+
+                    <div class="chat-body" id="chatBody">
+
+                        <div class="chat-msg left-msg floating-msg-1">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80"
+                                class="chat-avatar" alt="User">
+                            <div class="msg-content">
+                                <div class="msg-info">
+                                    <span class="msg-name">Viper_Pro</span>
+                                    <span class="msg-time">Today at 9:00 PM</span>
+                                </div>
+                                <div class="bubble neon-bubble">
+                                    Anyone up for a ranked match? Need a healer! 🎮
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-msg right-msg floating-msg-2">
+                            <div class="msg-content">
+                                <div class="msg-info justify-end">
+                                    <span class="msg-time">Today at 9:02 PM</span>
+                                    <span class="msg-name text-gold">You</span>
+                                </div>
+                                <div class="bubble gold-bubble">
+                                    I'm down! Send me an invite. Let's dominate! 🔥
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                                class="chat-avatar" alt="You">
+                        </div>
+
+                        <div class="chat-msg left-msg floating-msg-3">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
+                                class="chat-avatar" alt="User">
+                            <div class="msg-content">
+                                <div class="msg-info">
+                                    <span class="msg-name">Nova_Sniper</span>
+                                    <span class="msg-time">Today at 9:05 PM</span>
+                                </div>
+                                <div class="bubble neon-bubble">
+                                    Count me in too! Booting up now. 🚀
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="chat-input-area">
+                        <input type="text" id="chatInput" placeholder="Message #global-chat...">
+                        <button class="send-btn" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="cta-section" id="contact">
+
+            <div class="cta-glow-bg"></div>
+
+            <div class="cta-container">
+
+                <div class="cta-content" data-aos="zoom-in" data-aos-duration="1000">
+                    <h3 class="cta-subtitle">Ready To Start Gaming?</h3>
+                    <h2 class="cta-title">Join The <span class="text-gold">Gaming Revolution ⚡</span></h2>
+                    <p class="cta-desc">
+                        Become a gaming legend today. Step into the arena, conquer the leaderboards, and etch your name
+                        in the hall of fame. The ultimate squad is waiting for you!
+                    </p>
+
+                    <div class="cta-buttons">
+                        <a href="404page.html" class="btn-navy-gold-glow">
+                            <span class="btn-text">Play Now 🎮</span>
+                        </a>
+                        <a href="404page.html" class="btn-gold-outline">Contact Us 📩</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-col" data-aos="fade-up">
+                <a href="index.html" class="footer-logo">
+                    <h1 class="logo-text">STACK<span class="text-gold">LY</span></h1>
+                </a>
+                <p class="footer-desc">The ultimate gaming ecosystem. Experience elite matchmaking, real-time stats, and
+                    professional tournament infrastructure.</p>
+                <div class="social-links">
+                    <a href="404page.html" class="social-circle"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html" class="social-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html" class="social-circle"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>Platform</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Support</h3>
+                <ul class="contact-info">
+                    <li><i class="far fa-envelope"></i> <span>support@stackly.gaming</span></li>
+                    <li><i class="fas fa-location-dot"></i> <span>Salem City, Tamil Nadu</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Newsletter</h3>
+                <p>Get exclusive drops & tournament alerts.</p>
+                <form class="footer-form" onsubmit="event.preventDefault(); validateAndRedirect();">
+                    <input type="email" id="footerEmail" placeholder="Enter gaming email" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright-text">© 2026 Stackly Gaming. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Terms & Conditions</a>
+                    <span class="divider">|</span>
+                    <a href="404page.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function startCountdowns() {
+            document.querySelectorAll('.countdown-timer').forEach(timer => {
+                let timeParts = timer.getAttribute('data-time').split(':');
+                let totalSeconds = (+timeParts[0]) * 3600 + (+timeParts[1]) * 60 + (+timeParts[2]);
+
+                const interval = setInterval(() => {
+                    if (totalSeconds <= 0) {
+                        clearInterval(interval);
+                        timer.innerText = "00:00:00";
+                        return;
+                    }
+
+                    totalSeconds--;
+
+                    const pad = (num) => num.toString().padStart(2, '0');
+
+                    let h = Math.floor(totalSeconds / 3600);
+                    let m = Math.floor((totalSeconds % 3600) / 60);
+                    let s = totalSeconds % 60;
+
+                    timer.innerText = `${pad(h)}:${pad(m)}:${pad(s)}`;
+                }, 1000);
+            });
+        }
+        startCountdowns();
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const chatInput = document.getElementById("chatInput");
+            const sendBtn = document.getElementById("sendBtn");
+            const chatBody = document.getElementById("chatBody");
+
+            sendBtn.addEventListener("click", sendMessage);
+
+            chatInput.addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    sendMessage();
+                }
+            });
+
+            function sendMessage() {
+                const msgText = chatInput.value.trim();
+
+                if (msgText !== "") {
+                    const now = new Date();
+                    let hours = now.getHours();
+                    let minutes = now.getMinutes();
+                    const ampm = hours >= 12 ? 'PM' : 'AM';
+                    hours = hours % 12;
+                    hours = hours ? hours : 12;
+                    minutes = minutes < 10 ? '0' + minutes : minutes;
+                    const timeString = `Today at ${hours}:${minutes} ${ampm}`;
+
+                    const newMsgHTML = `
+                    <div class="chat-msg right-msg new-msg-anim">
+                        <div class="msg-content">
+                            <div class="msg-info justify-end">
+                                <span class="msg-time">${timeString}</span>
+                                <span class="msg-name text-gold">You</span>
+                            </div>
+                            <div class="bubble gold-bubble">
+                                ${msgText}
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" class="chat-avatar" alt="You">
+                    </div>
+                `;
+
+                    chatBody.insertAdjacentHTML('beforeend', newMsgHTML);
+
+                    chatInput.value = "";
+
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+        });
+    </script>
+    <script>
+        function validateAndRedirect() {
+            const emailInput = document.getElementById('footerEmail');
+
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

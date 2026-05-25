@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Blog | Stackly Gaming</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-scanner-box">
+            <div class="preloader-circle-radar"></div>
+            <div class="brand-text-matrix">
+                <i class="fa-solid fa-layer-group preloader-neon-icon"></i>
+                <h1 class="preloader-glitch-text">STACKLY</h1>
+                <p class="preloader-sub">INITIALIZING NODE SYSTEM...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" class="app-hidden">
+
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <div class="nav-menu-wrapper" id="menuWrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                    </li>
+                    <li><a href="about.html" class="nav-item"><i class="fa-solid fa-circle-info"></i><span>About
+                                Us</span></a></li>
+                    <li><a href="service.html" class="nav-item"><i
+                                class="fa-solid fa-gamepad"></i><span>Services</span></a></li>
+                    <li><a href="blog.html" class="nav-item active"><i
+                                class="fa-solid fa-newspaper"></i><span>Blog</span></a></li>
+                    <li><a href="contact.html" class="nav-item"><i
+                                class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+                <button class="login-btn" onclick="window.location.href='login.html'">LOGIN</button>
+            </div>
+
+            <div class="nav-right-controls">
+                <div class="burger" id="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="blog-hero-section" id="blogHero">
+
+            <div class="blog-bg-glow"></div>
+
+            <div class="blog-container">
+
+                <div class="blog-breadcrumb" data-aos="fade-down" data-aos-duration="1000">
+                    <a href="index.html" class="home-link">Home</a>
+                    <i class="fa-solid fa-angles-right"></i>
+                    <span class="current-page">Blog</span>
+                </div>
+
+                <div class="blog-hero-header" data-aos="fade-up" data-aos-duration="1200">
+                    <h3 class="gold-subtitle">EXPLORE THE GAMING UNIVERSE</h3>
+                    <h1 class="blog-main-title">GAMING NEWS <span class="text-gold">& UPDATES</span></h1>
+                    <p class="blog-desc">
+                        Dive into the latest gaming stories, patch notes, esports tournaments, and exclusive reviews.
+                        Stay ahead in the gaming revolution!
+                    </p>
+                </div>
+
+                <div class="blog-slider-container">
+
+                    <div class="blog-cards-wrapper" id="blogSliderWrapper" data-aos="fade-up" data-aos-duration="1500">
+
+                        <div class="blog-card">
+                            <div class="card-badge">HOT 🔥</div>
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                                alt="Esports News">
+                            <div class="card-content">
+                                <span class="blog-date">May 25, 2026</span>
+                                <h4>Global Esports Championship 2026: The Ultimate Showdown</h4>
+                                <a href="404page.html" class="btn-navy-gold-small">Read More <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="card-badge">UPDATE</div>
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=600&q=80"
+                                alt="Patch Notes">
+                            <div class="card-content">
+                                <span class="blog-date">May 22, 2026</span>
+                                <h4>Season 10 Patch Notes: New Weapons & Map Changes</h4>
+                                <a href="404page.html" class="btn-navy-gold-small">Read More <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="card-badge">REVIEW</div>
+                            <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&w=600&q=80"
+                                alt="Game Review">
+                            <div class="card-content">
+                                <span class="blog-date">May 18, 2026</span>
+                                <h4>Next-Gen Consoles: Are They Worth The Upgrade?</h4>
+                                <a href="404page.html" class="btn-navy-gold-small">Read More <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mobile-slider-controls">
+                        <button class="slider-btn" id="blogPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn" id="blogNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="fb-section" id="featuredBlog">
+            <div class="fb-container">
+
+                <div class="fb-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">EDITOR’S PICKS 📰</h3>
+                    <h2 class="section-title">FEATURED <span class="text-gold">ARTICLES</span></h2>
+                    <p class="fb-desc">
+                        Catch up on the trending gaming news, deep-dive analyses, and exclusive editor picks
+                        hand-selected just for you.
+                    </p>
+                </div>
+
+                <div class="fb-slider-container" data-aos="fade-up" data-aos-duration="1200">
+
+                    <div class="fb-cards-wrapper" id="fbSliderWrapper">
+
+                        <div class="fb-card-gradient-border">
+                            <div class="fb-card">
+                                <div class="fb-img-box">
+                                    <span class="fb-category">E-SPORTS</span>
+                                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80"
+                                        alt="Esports Tournament">
+                                </div>
+                                <div class="fb-content">
+                                    <h3 class="fb-title">The Rise of Mobile Esports: What to Expect in 2026</h3>
+                                    <p class="fb-excerpt">Mobile gaming is taking over the competitive scene. From prize
+                                        pools to viewership, see how mobile esports is changing the landscape.</p>
+
+                                    <div class="fb-meta">
+                                        <div class="fb-author">
+                                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=50&q=80"
+                                                alt="Author">
+                                            <span>Viper_Pro</span>
+                                        </div>
+                                        <span class="fb-date"><i class="fa-regular fa-clock"></i> May 24, 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fb-card-gradient-border">
+                            <div class="fb-card">
+                                <div class="fb-img-box">
+                                    <span class="fb-category">REVIEWS</span>
+                                    <img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?auto=format&fit=crop&w=800&q=80"
+                                        alt="Gaming Setup">
+                                </div>
+                                <div class="fb-content">
+                                    <h3 class="fb-title">Ultimate Cyber Setup: Best Gear for Pro Gamers</h3>
+                                    <p class="fb-excerpt">Looking to upgrade your battlestation? We review the top
+                                        mechanical keyboards, high-refresh-rate monitors, and precision mice of the
+                                        year.</p>
+
+                                    <div class="fb-meta">
+                                        <div class="fb-author">
+                                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=50&q=80"
+                                                alt="Author">
+                                            <span>Nova_Sniper</span>
+                                        </div>
+                                        <span class="fb-date"><i class="fa-regular fa-clock"></i> May 21, 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fb-card-gradient-border">
+                            <div class="fb-card">
+                                <div class="fb-img-box">
+                                    <span class="fb-category">NEWS</span>
+                                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80"
+                                        alt="Game Update">
+                                </div>
+                                <div class="fb-content">
+                                    <h3 class="fb-title">Studio Alpha Announces Groundbreaking Sci-Fi MMO</h3>
+                                    <p class="fb-excerpt">Get an exclusive first look at the highly anticipated Sci-Fi
+                                        MMO that promises to redefine open-world exploration and squad battles.</p>
+
+                                    <div class="fb-meta">
+                                        <div class="fb-author">
+                                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=50&q=80"
+                                                alt="Author">
+                                            <span>Cyber_Ninja</span>
+                                        </div>
+                                        <span class="fb-date"><i class="fa-regular fa-clock"></i> May 19, 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="fb-slider-controls">
+                        <button class="fb-btn" id="fbPrevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="fb-btn" id="fbNextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-news-section" id="latestNews">
+            <div class="ln-container">
+
+                <div class="ln-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">FRESH FROM THE GAMING WORLD</h3>
+                    <h2 class="section-title">BREAKING <span class="text-gold">GAMING NEWS</span></h2>
+                </div>
+
+                <div class="ln-grid">
+
+                    <div class="ln-card split-card" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="ln-img-box">
+                            <span class="ln-tag">UPDATE</span>
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                                alt="Cyberpunk Update">
+                        </div>
+                        <div class="ln-content">
+                            <span class="ln-date">May 25, 2026</span>
+                            <h3 class="ln-title">Cyber City 2077: Massive Patch Drops Tomorrow</h3>
+                            <p class="ln-excerpt">The developers have finally addressed the major bugs and are bringing
+                                a whole new district to explore.</p>
+                            <a href="404page.html" class="btn-read-more">Read More <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="ln-card split-card" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="100">
+                        <div class="ln-img-box">
+                            <span class="ln-tag neon-tag">NEW RELEASE</span>
+                            <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&w=600&q=80"
+                                alt="Console Release">
+                        </div>
+                        <div class="ln-content">
+                            <span class="ln-date">May 24, 2026</span>
+                            <h3 class="ln-title">PlayStation 6 Rumors: What We Know So Far</h3>
+                            <p class="ln-excerpt">Leaks suggest the next-gen console will feature built-in AI rendering
+                                and crazy 8K 120fps support.</p>
+                            <a href="404page.html" class="btn-read-more">Read More <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="ln-card split-card" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="ln-img-box">
+                            <span class="ln-tag">TOURNAMENT</span>
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+                                alt="Esports">
+                        </div>
+                        <div class="ln-content">
+                            <span class="ln-date">May 23, 2026</span>
+                            <h3 class="ln-title">Valorant Champions Tour: Underdog Team Wins</h3>
+                            <p class="ln-excerpt">In a shocking turn of events, the wildcard entry swept the grand
+                                finals 3-0 against the defending champions.</p>
+                            <a href="404page.html" class="btn-read-more">Read More <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="ln-card split-card" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="100">
+                        <div class="ln-img-box">
+                            <span class="ln-tag">RUMOR</span>
+                            <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=600&q=80"
+                                alt="GTA VI">
+                        </div>
+                        <div class="ln-content">
+                            <span class="ln-date">May 22, 2026</span>
+                            <h3 class="ln-title">GTA VI Map Expansion Leaked by Insider</h3>
+                            <p class="ln-excerpt">Data miners have uncovered files hinting at three new massive islands
+                                being added post-launch.</p>
+                            <a href="404page.html" class="btn-read-more">Read More <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="review-section" id="reviews">
+            <div class="review-container">
+
+                <div class="review-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">GAMER REVIEW HUB 🎮</h3>
+                    <h2 class="section-title">HONEST <span class="text-gold">GAME REVIEWS</span></h2>
+                    <p class="review-desc">
+                        Unbiased, detailed, and honest reviews of the top-rated games. Flip the cards to read our
+                        verdicts before you buy!
+                    </p>
+                </div>
+
+                <div class="review-grid">
+
+                    <div class="flip-card-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+                        <div class="flip-card-inner glowing-border">
+                            <div class="flip-card-front">
+                                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80"
+                                    alt="Space Game">
+                                <div class="front-glass-panel">
+                                    <span class="score-badge">9.5 / 10</span>
+                                    <h3>Stellar Frontier X</h3>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back glass-ui">
+                                <h3>Stellar Frontier X</h3>
+                                <p class="review-text">"An absolute masterpiece of sci-fi storytelling with breathtaking
+                                    visuals and smooth space combat. The open-world exploration is unmatched."</p>
+                                <ul class="pros-cons">
+                                    <li><i class="fa-solid fa-check text-gold"></i> Stunning Graphics</li>
+                                    <li><i class="fa-solid fa-xmark" style="color: #ff3366;"></i> Steep Learning Curve
+                                    </li>
+                                </ul>
+                                <a href="404page.html" class="btn-navy-gold-small">Read Full Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="100">
+                        <div class="flip-card-inner glowing-border">
+                            <div class="flip-card-front">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+                                    alt="Action RPG">
+                                <div class="front-glass-panel">
+                                    <span class="score-badge">8.8 / 10</span>
+                                    <h3>Blade of Legends</h3>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-regular fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back glass-ui">
+                                <h3>Blade of Legends</h3>
+                                <p class="review-text">"A solid action RPG that delivers intense boss fights and a deep
+                                    skill tree. The combat mechanics are incredibly satisfying for hardcore gamers."</p>
+                                <ul class="pros-cons">
+                                    <li><i class="fa-solid fa-check text-gold"></i> Fluid Combat System</li>
+                                    <li><i class="fa-solid fa-xmark" style="color: #ff3366;"></i> Repetitive Quests</li>
+                                </ul>
+                                <a href="404page.html" class="btn-navy-gold-small">Read Full Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                        <div class="flip-card-inner glowing-border">
+                            <div class="flip-card-front">
+                                <img src="https://images.unsplash.com/photo-1548686304-ac06f3944eb5?auto=format&fit=crop&w=600&q=80"
+                                    alt="Racing Game">
+                                <div class="front-glass-panel">
+                                    <span class="score-badge">9.0 / 10</span>
+                                    <h3>Neon Drift 2026</h3>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-card-back glass-ui">
+                                <h3>Neon Drift 2026</h3>
+                                <p class="review-text">"The ultimate cyberpunk racing experience. Pushes next-gen
+                                    graphics to the limit with insane sense of speed and customization."</p>
+                                <ul class="pros-cons">
+                                    <li><i class="fa-solid fa-check text-gold"></i> Ray-traced visuals</li>
+                                    <li><i class="fa-solid fa-xmark" style="color: #ff3366;"></i> Always-online DRM</li>
+                                </ul>
+                                <a href="404page.html" class="btn-navy-gold-small">Read Full Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="tips-section" id="tipsGuides">
+            <div class="tips-container">
+
+                <div class="tips-header" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="gold-subtitle">BEGINNER TO PRO GUIDES 🏆</h3>
+                    <h2 class="section-title">PRO GAMING <span class="text-gold">TIPS</span></h2>
+                </div>
+
+                <div class="tips-layout">
+
+                    <div class="tips-banner glowing-border" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="banner-inner">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+                                alt="Master Gameplay">
+                            <div class="banner-glass-content">
+                                <h3>MASTER YOUR GAMEPLAY ⚡</h3>
+                                <p>Learn advanced mechanics, aim training, and game sense from top-tier esports
+                                    professionals to dominate your ranked matches.</p>
+                                <a href="404page.html" class="btn-navy-gold-small">Watch Full Tutorial <i
+                                        class="fa-solid fa-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tips-sidebar" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+
+                        <div class="step-card">
+                            <div class="step-icon-box">
+                                <i class="fa-solid fa-crosshairs"></i>
+                                <span class="step-num">01</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Aim & Accuracy</h4>
+                                <p>Perfect your crosshair placement and find the perfect DPI sensitivity settings.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-icon-box">
+                                <i class="fa-solid fa-headset"></i>
+                                <span class="step-num">02</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Communication</h4>
+                                <p>Learn standard callouts and how to effectively coordinate with your squad.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-icon-box">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <span class="step-num">03</span>
+                            </div>
+                            <div class="step-content">
+                                <h4>Map Awareness</h4>
+                                <p>Master map rotations, spawn points, and strategic positioning to outsmart enemies.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="nl-cta-section" id="newsletter">
+
+            <div class="cyber-grid"></div>
+
+            <i class="fa-solid fa-gamepad floating-icon icon-1"></i>
+            <i class="fa-solid fa-headset floating-icon icon-2"></i>
+            <i class="fa-solid fa-mouse floating-icon icon-3"></i>
+            <i class="fa-solid fa-trophy floating-icon icon-4"></i>
+
+            <div class="nl-container" data-aos="zoom-in" data-aos-duration="1200">
+
+                <div class="nl-glass-card glowing-border-box">
+                    <h3 class="gold-subtitle">NEVER MISS AN UPDATE 🚀</h3>
+                    <h2 class="section-title">STAY UPDATED WITH <br> <span class="text-gold nowrap-text">GAMING
+                            NEWS</span></h2>
+                    <p class="nl-desc">
+                        Subscribe to our newsletter to get the latest gaming stories, exclusive reviews, and pro tips
+                        delivered straight to your inbox. Join our gamer community today!
+                    </p>
+
+                    <form class="nl-form" onsubmit="event.preventDefault(); validateMainNewsletter();">
+                        <div class="input-glass-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="nlEmailInput" placeholder="Enter your email address..." required
+                                class="glass-input">
+                        </div>
+                        <button type="submit" class="nl-submit-btn">Subscribe Now</button>
+                    </form>
+
+
+                    <p class="nl-or">- OR -</p>
+
+                    <a href="404page.html" class="btn-gold-outline-large">
+                        <i class="fa-brands fa-discord"></i> Join Community
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section brand-col" data-aos="fade-up">
+                <a href="index.html" class="footer-logo">
+                    <h1 class="logo-text">STACK<span class="text-gold">LY</span></h1>
+                </a>
+                <p class="footer-desc">The ultimate gaming ecosystem. Experience elite matchmaking, real-time stats, and
+                    professional tournament infrastructure.</p>
+                <div class="social-links">
+                    <a href="404page.html" class="social-circle"><i class="fab fa-instagram"></i></a>
+                    <a href="404page.html" class="social-circle"><i class="fab fa-twitter"></i></a>
+                    <a href="404page.html" class="social-circle"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>Platform</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Support</h3>
+                <ul class="contact-info">
+                    <li><i class="far fa-envelope"></i> <span>support@stackly.gaming</span></li>
+                    <li><i class="fas fa-location-dot"></i> <span>Salem City, Tamil Nadu</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-section newsletter-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Newsletter</h3>
+                <p>Get exclusive drops & tournament alerts.</p>
+                <form class="footer-form" onsubmit="event.preventDefault(); validateAndRedirect();">
+                    <input type="email" id="footerEmail" placeholder="Enter gaming email" required>
+                    <button type="submit">JOIN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-container">
+                <p class="copyright-text">© 2026 Stackly Gaming. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404page.html">Terms & Conditions</a>
+                    <span class="divider">|</span>
+                    <a href="404page.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sliderWrapper = document.getElementById('blogSliderWrapper');
+            const prevBtn = document.getElementById('blogPrevBtn');
+            const nextBtn = document.getElementById('blogNextBtn');
+
+            if (prevBtn && nextBtn && sliderWrapper) {
+                prevBtn.addEventListener('click', () => {
+                    const cardWidth = sliderWrapper.querySelector('.blog-card').offsetWidth + 30;
+                    sliderWrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    const cardWidth = sliderWrapper.querySelector('.blog-card').offsetWidth + 30;
+                    sliderWrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fbWrapper = document.getElementById('fbSliderWrapper');
+            const fbPrev = document.getElementById('fbPrevBtn');
+            const fbNext = document.getElementById('fbNextBtn');
+
+            if (fbPrev && fbNext && fbWrapper) {
+                fbPrev.addEventListener('click', () => {
+                    const scrollAmount = fbWrapper.querySelector('.fb-card-gradient-border').offsetWidth + 30;
+                    fbWrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+
+                fbNext.addEventListener('click', () => {
+                    const scrollAmount = fbWrapper.querySelector('.fb-card-gradient-border').offsetWidth + 30;
+                    fbWrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+    <script>
+        function validateAndRedirect() {
+            const emailInput = document.getElementById('footerEmail');
+
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+    </script>
+
+    <script>
+        function validateMainNewsletter() {
+            const emailInput = document.getElementById('nlEmailInput');
+
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Mission Failed | Gaming Hub</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #030508;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        .error-bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 65%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                transform: translate(-50%, -50%) scale(0.9);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        .error-cyber-grid {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background-image:
+                linear-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+            opacity: 0.7;
+            transform: rotateX(20deg);
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+        }
+
+        .error-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 10rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #eaeaea;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+            animation: glitchFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes glitchFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .error-code::before,
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #030508;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .error-code::before {
+            left: 2px;
+            text-shadow: -2px 0 #d4af37;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitchAnim 5s infinite linear alternate-reverse;
+        }
+
+        .error-code::after {
+            left: -2px;
+            text-shadow: -2px 0 #0d1527;
+            clip: rect(85px, 450px, 140px, 0);
+            animation: glitchAnim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitchAnim {
+            0% {
+                clip: rect(31px, 9999px, 94px, 0);
+            }
+
+            20% {
+                clip: rect(85px, 9999px, 5px, 0);
+            }
+
+            40% {
+                clip: rect(73px, 9999px, 29px, 0);
+            }
+
+            60% {
+                clip: rect(9px, 9999px, 43px, 0);
+            }
+
+            100% {
+                clip: rect(67px, 9999px, 102px, 0);
+            }
+        }
+
+        @keyframes glitchAnim2 {
+            0% {
+                clip: rect(76px, 9999px, 116px, 0);
+            }
+
+            22% {
+                clip: rect(122px, 9999px, 14px, 0);
+            }
+
+            44% {
+                clip: rect(82px, 9999px, 140px, 0);
+            }
+
+            66% {
+                clip: rect(9px, 9999px, 55px, 0);
+            }
+
+            100% {
+                clip: rect(95px, 9999px, 45px, 0);
+            }
+        }
+
+        .status-badge {
+            font-family: 'Orbitron', sans-serif;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .error-desc {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .error-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn-go-back {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #0d1527;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 16px 35px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .btn-go-back i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-go-back:hover {
+            transform: scale(1.05) translateY(-3px);
+            background: #d4af37;
+            color: #0d1527;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-go-back:hover i {
+            transform: translateX(-5px);
+        }
+
+        .btn-go-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: transparent;
+            color: #d4af37;
+            border: 2px solid #d4af37;
+            padding: 16px 35px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .btn-go-home i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-go-home:hover {
+            transform: scale(1.05) translateY(-3px);
+            background: #d4af37;
+            color: #0d1527;
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-go-home:hover i {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6.5rem;
+            }
+
+            .status-badge {
+                font-size: 0.75rem;
+                padding: 6px 14px;
+            }
+
+            .error-desc {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .error-actions {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn-go-back,
+            .btn-go-home {
+                width: 100%;
+                max-width: 280px;
+                padding: 14px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="error-bg-glow"></div>
+    <div class="error-cyber-grid" id="cyberGrid"></div>
+
+    <div class="error-container">
+
+        <div class="status-badge"><i class="fa-solid fa-triangle-exclamation"></i> MISSION FAILED</div>
+
+        <br>
+
+        <h1 class="error-code">404</h1>
+
+        <p class="error-desc">The corporate link is broken or the asset has been moved.</p>
+
+        <div class="error-actions">
+            <a href="javascript:history.back()" class="btn-go-back">
+                <i class="fa-solid fa-arrow-left"></i> Go Back
+            </a>
+            <a href="index.html" class="btn-go-home">
+                <i class="fa-solid fa-house"></i> Go To Home
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        const grid = document.getElementById('cyberGrid');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth / 2 - e.pageX) / 25;
+            const y = (window.innerHeight / 2 - e.pageY) / 25;
+
+            grid.style.transform = `rotateX(${20 + y}deg) rotateY(${x}deg) translateY(${y * 0.5}px)`;
+        });
+    </script>
+
+</body>
+
+</html>

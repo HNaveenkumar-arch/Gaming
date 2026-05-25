@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stackly Gaming | Optimized Unified Console</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-scanner-box">
+            <div class="preloader-circle-radar"></div>
+            <div class="brand-text-matrix">
+                <i class="fa-solid fa-layer-group preloader-neon-icon"></i>
+                <h1 class="preloader-glitch-text">STACKLY</h1>
+                <p class="preloader-sub">INITIALIZING NODE SYSTEM...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" class="app-hidden">
+
+        <header class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+                </a>
+            </div>
+
+            <div class="nav-menu-wrapper" id="menuWrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item active"><i
+                                class="fa-solid fa-house"></i><span>Home</span></a></li>
+                    <li><a href="about.html" class="nav-item"><i class="fa-solid fa-circle-info"></i><span>About
+                                Us</span></a></li>
+                    <li><a href="service.html" class="nav-item"><i
+                                class="fa-solid fa-gamepad"></i><span>Services</span></a></li>
+                    <li><a href="blog.html" class="nav-item"><i class="fa-solid fa-newspaper"></i><span>Blog</span></a>
+                    </li>
+                    <li><a href="contact.html" class="nav-item"><i
+                                class="fa-solid fa-envelope"></i><span>Contact</span></a></li>
+                </ul>
+                <button class="login-btn" onclick="window.location.href='login.html'">LOGIN</button>
+            </div>
+
+            <div class="nav-right-controls">
+                <div class="burger" id="burgerMenu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero-section" id="home">
+
+            <div class="video-wrapper">
+                <video autoplay muted loop playsinline class="bg-video">
+                    <source
+                        src="https://assets.mixkit.co/videos/preview/mixkit-animation-of-a-futuristic-city-43075-large.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <canvas id="particleCanvas" class="particle-layer"></canvas>
+
+            <div class="hero-slider-container">
+
+                <div class="hero-slide active">
+                    <div class="floating-character">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+                            alt="Character 1">
+                    </div>
+                    <div class="hero-content">
+                        <h3 class="gold-subtitle">ENTER THE GAMING WORLD</h3>
+                        <h1 class="hero-title">WHERE GAMERS BECOME <span class="text-gold">LEGENDS</span></h1>
+                        <p class="hero-description">Play beyond limits. Join the ultimate battle arena and level up your
+                            experience with next-gen graphics and zero latency matchmaking.</p>
+                        <div class="hero-buttons">
+                            <button class="btn-gold-glow play-now" onclick="window.location.href='404page.html'"><i
+                                    class="fa-solid fa-play"></i> PLAY NOW</button>
+                            <button class="btn-outline explore-games" onclick="window.location.href='404page.html'"><i
+                                    class="fa-solid fa-compass"></i> EXPLORE GAMES</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <div class="floating-character">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png"
+                            alt="Character 2">
+                    </div>
+                    <div class="hero-content">
+                        <h3 class="gold-subtitle">NEXT-GEN ESPORTS</h3>
+                        <h1 class="hero-title">DOMINATE THE <span class="text-gold">BATTLEFIELD</span></h1>
+                        <p class="hero-description">Experience tactical cross-platform arena combat zones. Connect with
+                            low-latency dedicated hardware lines for unparalleled precision.</p>
+                        <div class="hero-buttons">
+                            <button class="btn-gold-glow" onclick="window.location.href='404page.html'"><i
+                                    class="fa-solid fa-trophy"></i> TOURNAMENTS</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <div class="floating-character">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png"
+                            alt="Character 3">
+                    </div>
+                    <div class="hero-content">
+                        <h3 class="gold-subtitle">METAVERSE CONQUESTS</h3>
+                        <h1 class="hero-title">CONQUER NEW <span class="text-gold">REALITIES</span></h1>
+                        <p class="hero-description">Step into open-world rendering parameters. Upgrade tactical modules,
+                            track clan dominance patterns, and claim high-tier assets.</p>
+                        <div class="hero-buttons">
+                            <button class="btn-gold-glow" onclick="window.location.href='404page.html'"><i
+                                    class="fa-solid fa-rocket"></i> JOIN SQUAD</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+
+        </section>
+
+        <section class="featured-section" id="featured-games">
+            <div class="section-header">
+                <div class="title-wrapper">
+                    <h3 class="gold-subtitle">MOST POPULAR</h3>
+                    <h2 class="section-title">TRENDING <span class="text-gold">ARENA</span></h2>
+                </div>
+                <div class="slider-controls">
+                    <button class="slide-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slide-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="games-slider" id="gamesSlider">
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="200">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                            alt="Shadow Protocol"><span class="genre-tag">FPS Action</span></div>
+                    <div class="game-info">
+                        <h3>Shadow Protocol</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star-half-stroke"></i></div><span>4.8</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="400">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+                            alt="Velocity X"><span class="genre-tag">Racing</span></div>
+                    <div class="game-info">
+                        <h3>Velocity X</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i></div><span>4.2</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="600">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80"
+                            alt="Neon Knights"><span class="genre-tag">RPG Arena</span></div>
+                    <div class="game-info">
+                        <h3>Neon Knights</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i></div><span>5.0</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="800">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80"
+                            alt="Cyber Warfare"><span class="genre-tag">Battle Royale</span></div>
+                    <div class="game-info">
+                        <h3>Cyber Warfare</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star-half-stroke"></i></div><span>4.7</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="600">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1614729939124-032f0b56c802?auto=format&fit=crop&w=600&q=80"
+                            alt="Galactic Siege"><span class="genre-tag">Strategy</span></div>
+                    <div class="game-info">
+                        <h3>Galactic Siege</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                                    class="fa-regular fa-star"></i></div><span>3.9</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+                <div class="game-card" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="700">
+                    <div class="game-img-wrapper"><img
+                            src="https://images.unsplash.com/photo-1593341646847-987437667d26?auto=format&fit=crop&w=600&q=80"
+                            alt="Void Runner"><span class="genre-tag">Adventure</span></div>
+                    <div class="game-info">
+                        <h3>Void Runner</h3>
+                        <div class="rating">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-regular fa-star"></i></div><span>4.5</span>
+                        </div>
+                        <button class="btn-card-play" onclick="window.location.href='404page.html'">PLAY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <h3 class="gold-subtitle" data-aos="fade-up">WHY CHOOSE US</h3>
+                    <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">EXPERIENCE NEXT-LEVEL <span
+                            class="text-gold">GAMING</span></h2>
+                    <p class="about-desc" data-aos="fade-up" data-aos-delay="200">
+                        We bridge the gap between players and technology. With low-latency global servers, elite
+                        tournaments, and a community of thousands, we don't just host games—we build legacies.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="feature-text">
+                                <h4>Lightning Speed</h4>
+                                <p>Zero-latency server infrastructure.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon-box"><i class="fa-solid fa-users"></i></div>
+                            <div class="feature-text">
+                                <h4>Global Community</h4>
+                                <p>Connect with millions of gamers.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="feature-text">
+                                <h4>Secure Arena</h4>
+                                <p>Anti-cheat enabled environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="visual-box">
+                        <img src="https://images.unsplash.com/photo-1593341646847-987437667d26?auto=format&fit=crop&w=600&q=80"
+                            alt="Gaming Setup">
+                        <div class="floating-stat">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span>10k+ Tournaments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="tournament-section" id="tournaments">
+            <div class="section-header" data-aos="fade-up">
+                <h3 class="gold-subtitle">LIVE ESPORTS</h3>
+                <h2 class="section-title">BATTLE FOR <span class="text-gold">GLORY</span></h2>
+            </div>
+
+            <div class="tournament-grid">
+                <div class="match-card live" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="status-tag">LIVE NOW</div>
+                    <h3>Cyber League S4</h3>
+                    <div class="match-time"><i class="fa-solid fa-clock"></i> <span>Ongoing</span></div>
+                    <div class="teams"><span>Team Alpha</span> <b>VS</b> <span>Team Omega</span></div>
+                    <button class="btn-neon" onclick="window.location.href='404page.html'">WATCH STREAM</button>
+                </div>
+
+                <div class="match-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="status-tag upcoming">UPCOMING</div>
+                    <h3>Global Warzone</h3>
+                    <div class="match-time" id="timer1">02:15:45</div>
+                    <div class="teams"><span>Team Delta</span> <b>VS</b> <span>Team Sigma</span></div>
+                    <button class="btn-neon-outline" onclick="window.location.href='404page.html'">SET REMINDER</button>
+                </div>
+
+                <div class="match-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="status-tag upcoming">UPCOMING</div>
+                    <h3>Valorant Pro Elite</h3>
+                    <div class="match-time">04:30:00</div>
+                    <div class="teams"><span>Sentinels</span> <b>VS</b> <span>100Thieves</span></div>
+                    <button class="btn-neon-outline" onclick="window.location.href='404page.html'">SET REMINDER</button>
+                </div>
+
+                <div class="match-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="status-tag upcoming">UPCOMING</div>
+                    <h3>Dota 2 Masters</h3>
+                    <div class="match-time">06:00:00</div>
+                    <div class="teams"><span>Liquid</span> <b>VS</b> <span>Spirit</span></div>
+                    <button class="btn-neon-outline" onclick="window.location.href='404page.html'">SET REMINDER</button>
+                </div>
+
+                <div class="match-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="status-tag upcoming">UPCOMING</div>
+                    <h3>League of Legends</h3>
+                    <div class="match-time">08:15:00</div>
+                    <div class="teams"><span>T1</span> <b>VS</b> <span>DRX</span></div>
+                    <button class="btn-neon-outline" onclick="window.location.href='404page.html'">SET REMINDER</button>
+                </div>
+
+                <div class="match-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="status-tag upcoming">UPCOMING</div>
+                    <h3>Rocket League Cup</h3>
+                    <div class="match-time">10:45:00</div>
+                    <div class="teams"><span>G2</span> <b>VS</b> <span>Furia</span></div>
+                    <button class="btn-neon-outline" onclick="window.location.href='404page.html'">SET REMINDER</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section" id="categories">
+            <div class="categories-container">
+
+                <div class="categories-visual" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="image-glow-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+                            alt="Gaming Genres" class="cat-img">
+                        <div class="glass-tag"><i class="fa-solid fa-vr-cardboard"></i> 50+ Game Modes</div>
+                    </div>
+                </div>
+
+                <div class="categories-content">
+
+                    <div class="categories-header" data-aos="fade-left">
+                        <h3 class="gold-subtitle">EXPLORE CATEGORIES</h3>
+                        <h2 class="section-title">CHOOSE YOUR <span class="text-gold">BATTLE STYLE</span></h2>
+                        <p class="section-desc">
+                            Dive into a multiverse of gaming genres. Whether you're a tactical mastermind, a speed
+                            demon, or a lone-wolf explorer, we have the perfect arena waiting for your skills. Pick your
+                            class and dominate the leaderboards.
+                        </p>
+                    </div>
+
+                    <div class="hex-grid">
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-crosshairs hex-icon"></i>
+                                <h3 class="hex-title">FPS</h3>
+                                <p class="hex-desc">Tactical Shooters</p>
+                            </div>
+                        </div>
+
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-car-side hex-icon"></i>
+                                <h3 class="hex-title">RACING</h3>
+                                <p class="hex-desc">High-Speed Tracks</p>
+                            </div>
+                        </div>
+
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-fire hex-icon"></i>
+                                <h3 class="hex-title">ACTION</h3>
+                                <p class="hex-desc">Combat & Brawl</p>
+                            </div>
+                        </div>
+
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-compass hex-icon"></i>
+                                <h3 class="hex-title">RPG</h3>
+                                <p class="hex-desc">Open World Quests</p>
+                            </div>
+                        </div>
+
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-futbol hex-icon"></i>
+                                <h3 class="hex-title">SPORTS</h3>
+                                <p class="hex-desc">E-League Matches</p>
+                            </div>
+                        </div>
+
+                        <div class="hex-wrapper" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="hex-card">
+                                <i class="fa-solid fa-chess-knight hex-icon"></i>
+                                <h3 class="hex-title">STRATEGY</h3>
+                                <p class="hex-desc">RTS & MOBA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="stats-section" id="statistics">
+            <div class="stats-header" data-aos="fade-up">
+                <h3 class="gold-subtitle">PLATFORM HIGHLIGHTS</h3>
+                <h2 class="section-title">OUR GAMING <span class="text-gold">ACHIEVEMENTS</span></h2>
+                <p class="section-desc" style="text-align: center; max-width: 750px; margin: 15px auto 40px auto;">
+                    Join the fastest-growing esports network. We provide top-tier servers, lightning-fast matchmaking,
+                    and a massive global community. Experience zero packet loss and seamless cross-platform integration
+                    for the ultimate competitive edge.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="glass-stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <h3 class="counter" data-target="10000">0</h3>
+                    <p class="stat-label">Active Players</p>
+                    <p class="stat-sub">Across 50+ Countries</p>
+                </div>
+
+                <div class="glass-stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p class="stat-label">Games Hosted</p>
+                    <p class="stat-sub">From FPS to MMORPGs</p>
+                </div>
+
+                <div class="glass-stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p class="stat-label">Pro Tournaments</p>
+                    <p class="stat-sub">With $1M+ Prize Pools</p>
+                </div>
+            </div>
+
+            <div class="stats-details">
+
+                <div class="stats-image" data-aos="fade-right" data-aos-delay="200">
+                    <div class="image-glow-wrapper stat-img-hover">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80"
+                            alt="Server Infrastructure" class="cat-img" style="min-height: 420px;">
+                        <div class="glass-tag"><i class="fa-solid fa-server"></i> Dedicated Servers</div>
+
+                        <div class="live-status-tag">
+                            <span class="pulse-green-dot"></span> All Systems Operational
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-bars" data-aos="fade-left" data-aos-delay="300">
+                    <h3 class="bar-title">Network Performance</h3>
+                    <p class="bar-desc">Real-time metrics of our global server infrastructure ensuring uninterrupted
+                        gameplay and secure matchmaking.</p>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Server Uptime</span>
+                            <span>99.9%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="99%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Matchmaking Speed (< 10s)</span>
+                                    <span>95%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Anti-Cheat Efficiency</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="98%"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span>Global Ping Stability</span>
+                            <span>96%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" data-width="96%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="testimonials-section" id="reviews">
+            <div class="stats-header" data-aos="fade-up">
+                <h3 class="gold-subtitle">COMMUNITY FEEDBACK</h3>
+                <h2 class="section-title">WHAT GAMERS <span class="text-gold">SAY</span></h2>
+                <p class="section-desc" style="text-align: center; max-width: 600px; margin: 15px auto 40px auto;">
+                    Hear from the pro players and community members who have made our platform their ultimate gaming
+                    home.
+                </p>
+            </div>
+
+            <div class="stack-container" data-aos="zoom-in" data-aos-duration="1000">
+
+                <div class="stack-area">
+                    <div class="testi-3d-card">
+                        <i class="fa-solid fa-quote-right quote-bg"></i>
+                        <div class="testi-header">
+                            <img src="https://images.unsplash.com/photo-1566492031525-65c5319cb363?auto=format&fit=crop&w=150&q=80"
+                                alt="Gamer Profile">
+                            <div class="testi-user">
+                                <h4>Alex "Sniper" Vance</h4>
+                                <span>@alex_pro_aim</span>
+                            </div>
+                        </div>
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <p class="testi-text">"The zero-latency servers changed the way I play competitive FPS. The
+                            matchmaking is insane, and I've never experienced smoother gameplay."</p>
+                    </div>
+
+                    <div class="testi-3d-card">
+                        <i class="fa-solid fa-quote-right quote-bg"></i>
+                        <div class="testi-header">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+                                alt="Gamer Profile">
+                            <div class="testi-user">
+                                <h4>Sarah "Valkyrie" Chen</h4>
+                                <span>@valkyrie_plays</span>
+                            </div>
+                        </div>
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star-half-stroke"></i></div>
+                        <p class="testi-text">"I love the community features! Finding a squad for RPG raids has never
+                            been easier. The UI is dark, neon, and exactly what a gaming platform should look like."</p>
+                    </div>
+
+                    <div class="testi-3d-card">
+                        <i class="fa-solid fa-quote-right quote-bg"></i>
+                        <div class="testi-header">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+                                alt="Gamer Profile">
+                            <div class="testi-user">
+                                <h4>Marcus "Drift" Kane</h4>
+                                <span>@drift_king99</span>
+                            </div>
+                        </div>
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i></div>
+                        <p class="testi-text">"Tournament payouts are fast, and the anti-cheat system actually works.
+                            I've been participating in the weekly racing leagues and it's an absolute blast."</p>
+                    </div>
+
+                    <div class="testi-3d-card">
+                        <i class="fa-solid fa-quote-right quote-bg"></i>
+                        <div class="testi-header">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+                                alt="Gamer Profile">
+                            <div class="testi-user">
+                                <h4>Elena "Mystic" Rose</h4>
+                                <span>@mystic_mage</span>
+                            </div>
+                        </div>
+                        <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></div>
+                        <p class="testi-text">"A must-have platform for any serious gamer. The UI is sleek, and tracking
+                            my stats across multiple games gives me the insights I need to improve."</p>
+                    </div>
+
+                </div>
+
+                <div class="stack-controls">
+                    <button class="testi-btn" id="stackPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="testi-btn" id="stackNext"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="download-section" id="download">
+            <div class="download-container">
+
+                <div class="download-visual" data-aos="fade-right">
+                    <div class="phone-mockup stat-img-hover">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80"
+                            alt="App UI" class="app-ui-screen">
+                        <div class="phone-frame"></div>
+                    </div>
+                </div>
+
+                <div class="download-content" data-aos="fade-left">
+                    <h3 class="gold-subtitle">GAMING ON THE GO</h3>
+                    <h2 class="section-title">PLAY ANYWHERE <span class="text-gold">ANYTIME</span></h2>
+                    <p class="section-desc">
+                        Take your gaming lifestyle to the next level. Our mobile app bridges the gap between your
+                        console and your pocket, ensuring you never miss a beat in the gaming world.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-circle-check"></i>
+                            <div><strong>Real-time Stats:</strong> Track your global ranking and performance metrics
+                                instantly.</div>
+                        </li>
+                        <li><i class="fa-solid fa-circle-check"></i>
+                            <div><strong>Social Hub:</strong> Connect, chat, and form squads with your friends on the
+                                fly.</div>
+                        </li>
+                        <li><i class="fa-solid fa-circle-check"></i>
+                            <div><strong>Exclusive Loot:</strong> Unlock mobile-only rewards and limited-time event
+                                badges.</div>
+                        </li>
+                    </ul>
+
+                    <div class="store-buttons">
+                        <a href="404page.html" class="btn-store">
+                            <i class="fa-brands fa-google-play"></i>
+                            <div class="btn-text"><span>GET IT ON</span> Google Play</div>
+                        </a>
+                        <a href="404page.html" class="btn-store">
+                            <i class="fa-brands fa-apple"></i>
+                            <div class="btn-text"><span>DOWNLOAD ON</span> App Store</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="newsletter-section" id="newsletter">
+            <div class="grid-overlay"></div>
+            <div class="newsletter-content" data-aos="zoom-in">
+                <h3 class="gold-subtitle">STAY CONNECTED</h3>
+                <h2 class="section-title">NEVER MISS <span class="text-gold">GAMING UPDATES</span></h2>
+
+                <p class="section-desc">
+                    Join 50,000+ elite players worldwide. Get insider access to new game releases,
+                    pro-level strategy guides, and limited-edition tournament rewards sent straight to your inbox.
+                </p>
+
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your gaming email..." required>
+                    <button type="submit" class="btn-glow-subscribe">
+                        SUBSCRIBE NOW
+                    </button>
+                </form>
+
+                <p class="newsletter-note">
+                    <i class="fa-solid fa-shield-halved"></i> We respect your privacy. No spam, only high-voltage gaming
+                    content.
+                </p>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section brand-col" data-aos="fade-up">
+                    <a href="index.html" class="footer-logo">
+                        <h1 class="logo-text">STACK<span class="text-gold">LY</span></h1>
+                    </a>
+                    <p class="footer-desc">The ultimate gaming ecosystem. Experience elite matchmaking, real-time stats,
+                        and professional tournament infrastructure.</p>
+                    <div class="social-links">
+                        <a href="404page.html" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="404page.html" class="social-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="404page.html" class="social-circle"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Service</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Support</h3>
+                    <ul class="contact-info">
+                        <li><i class="far fa-envelope"></i> <span>support@stackly.gaming</span></li>
+                        <li><i class="fas fa-location-dot"></i> <span>Salem City, Tamil Nadu</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section newsletter-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Newsletter</h3>
+                    <p>Get exclusive drops & tournament alerts.</p>
+
+                    <form class="footer-form" onsubmit="event.preventDefault(); validateAndRedirect();">
+                        <input type="email" id="footerEmail" placeholder="Enter gaming email" required>
+                        <button type="submit">JOIN</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="bottom-container">
+                    <p class="copyright-text">© 2026 Stackly Gaming. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="404page.html">Terms & Conditions</a>
+                        <span class="divider">|</span>
+                        <a href="404page.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function validateAndRedirect() {
+            const emailInput = document.getElementById('footerEmail');
+
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+        function validateNewsletterTwo() {
+            const emailInput = document.getElementById('newsEmail2');
+
+            if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
+                window.location.href = '404page.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

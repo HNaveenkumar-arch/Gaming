@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stackly Gaming | Login</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #050810;
+            --card-bg: rgba(13, 21, 39, 0.45);
+            --gold: #d4af37;
+            --gold-hover: #f3cd44;
+            --neon-blue: #00f2fe;
+            --text-white: #f8f9fa;
+            --text-gray: #8fa0c4;
+            --error-red: #ff3366;
+            --primary-glow: rgba(0, 242, 254, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #0a1122 0%, var(--bg-dark) 100%);
+            color: var(--text-white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .auth-wrapper {
+            width: 100%;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-box {
+            width: 100%;
+            max-width: 1050px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .back-to-home {
+            align-self: flex-start;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-to-home:hover {
+            color: var(--gold);
+            transform: translateX(-5px);
+        }
+
+        .glass-container {
+            width: 100%;
+            min-height: 650px;
+            background: var(--card-bg);
+            border: 1px solid rgba(214, 175, 55, 0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        .form-side {
+            padding: 40px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--gold);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-section {
+            display: none;
+            opacity: 0;
+        }
+
+        .form-section.active {
+            display: block;
+            opacity: 1;
+            animation: slideUp 0.4s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(15px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+
+        .role-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            background: rgba(3, 6, 10, 0.6);
+            padding: 6px;
+            border-radius: 10px;
+            border: 1px solid rgba(214, 175, 55, 0.2);
+        }
+
+        .role-option {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-gray);
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+            border: 1px solid transparent;
+        }
+
+        .role-option.active {
+            background: rgba(214, 175, 55, 0.15);
+            color: var(--gold);
+            border-color: var(--gold);
+            box-shadow: inset 0 0 10px rgba(214, 175, 55, 0.1);
+        }
+
+        .role-option i {
+            margin-right: 6px;
+        }
+
+        .input-group {
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
+        }
+
+        .input-group label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-gray);
+        }
+
+        .input-field-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .icon-left {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        .icon-right {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .icon-right:hover {
+            color: var(--text-white);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 45px;
+            background: rgba(3, 6, 10, 0.6);
+            border: 1px solid rgba(214, 175, 55, 0.2);
+            color: var(--text-white);
+            border-radius: 8px;
+            outline: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--gold);
+            background: rgba(3, 6, 10, 0.85);
+            box-shadow: 0 0 10px rgba(214, 175, 55, 0.15);
+        }
+
+        .error-msg {
+            color: var(--error-red);
+            font-size: 0.75rem;
+            font-weight: 500;
+            min-height: 18px;
+            margin-bottom: 10px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+            margin-top: 5px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            cursor: pointer;
+        }
+
+        .forgot-pass {
+            color: var(--gold);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .forgot-pass:hover {
+            color: var(--gold-hover);
+            text-decoration: underline;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, #b38f1b, var(--gold));
+            color: #03060a;
+            border: none;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(214, 175, 55, 0.3);
+        }
+
+        .social-divider {
+            text-align: center;
+            margin: 25px 0 15px;
+            position: relative;
+        }
+
+        .social-divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: rgba(143, 160, 196, 0.15);
+            z-index: 1;
+        }
+
+        .social-divider span {
+            background: #090e19;
+            padding: 0 12px;
+            font-size: 0.7rem;
+            color: var(--text-gray);
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(143, 160, 196, 0.15);
+            background: rgba(3, 6, 10, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-white);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            border-color: var(--gold);
+            color: #050810;
+            transform: translateY(-3px);
+            background-color: var(--gold);
+        }
+
+        .switch-text {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .switch-text span {
+            color: var(--gold);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .switch-text span:hover {
+            text-decoration: underline;
+        }
+
+        .graphic-side {
+            background: rgba(4, 8, 16, 0.6);
+            border-left: 1px solid rgba(214, 175, 55, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .rgb-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--primary-glow);
+            filter: blur(120px);
+            border-radius: 50%;
+            animation: pulse 4s infinite alternate;
+        }
+
+        .floating-character {
+            font-size: 7rem;
+            color: var(--text-white);
+            text-shadow: 0 0 40px var(--primary-glow);
+            animation: float 4s infinite alternate;
+            z-index: 2;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .glass-card-info {
+            background: rgba(13, 21, 39, 0.5);
+            border: 1px solid rgba(214, 175, 55, 0.2);
+            padding: 20px;
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            text-align: center;
+            width: 85%;
+            z-index: 3;
+        }
+
+        .badge {
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+            color: #00ff66;
+            background: rgba(0, 255, 102, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .glass-card-info h3 {
+            font-family: 'Orbitron';
+            color: var(--neon-blue);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .glass-card-info p {
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .brand-logo-img {
+            height: 38px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: filter 0.3s ease;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-link:hover .brand-logo-img {
+            filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
+
+        @media (max-width: 768px) {
+            .brand-logo-img {
+                height: 30px;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-10px) rotate(-3deg);
+            }
+
+            100% {
+                transform: translateY(10px) rotate(3deg);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .glass-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-side {
+                padding: 40px 30px;
+            }
+
+            .graphic-side {
+                border-left: none;
+                border-top: 1px solid rgba(214, 175, 55, 0.1);
+                min-height: 350px;
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .role-selector {
+                flex-direction: column;
+            }
+
+            .floating-character {
+                font-size: 5rem;
+                margin-bottom: 20px;
+            }
+
+            .rgb-glow {
+                width: 200px;
+                height: 200px;
+            }
+
+            .glass-card-info {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+        <div class="content-box">
+
+            <a href="index.html" class="back-to-home">
+                <i class="fa-solid fa-arrow-left-long"></i> Back to Home
+            </a>
+
+            <div class="glass-container">
+                <div class="form-side">
+                    <div class="logo">
+                        <a href="index.html" class="logo-link">
+                            <img src="./asset/yellow_logo.webp" alt="STACKLY Logo" class="brand-logo-img">
+                        </a>
+                    </div>
+
+                    <div id="loginSection" class="form-section active">
+                        <h2>Welcome Back 🎮</h2>
+                        <p class="subtitle">Enter credentials to establish transmission.</p>
+
+                        <div class="role-selector">
+                            <div class="role-option active" id="rolePlayer" onclick="selectRole('player')">
+                                <i class="fa-solid fa-gamepad"></i> Gamer
+                            </div>
+                            <div class="role-option" id="roleAdmin" onclick="selectRole('admin')">
+                                <i class="fa-solid fa-shield-halved"></i> Administrator
+                            </div>
+                        </div>
+                        <input type="hidden" id="selectedRole" value="player">
+
+                        <form id="loginForm" novalidate>
+                            <div class="input-group">
+                                <label>Email Address</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-envelope icon-left"></i>
+                                    <input type="email" id="loginEmail">
+                                </div>
+                                <div id="loginEmailErr" class="error-msg"></div>
+                            </div>
+                            <div class="input-group">
+                                <label>Password</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-lock icon-left"></i>
+                                    <input type="password" id="loginPass">
+                                    <i class="fa-solid fa-eye icon-right" onclick="togglePass('loginPass', this)"></i>
+                                </div>
+                                <div id="loginPassErr" class="error-msg"></div>
+                            </div>
+
+                            <div class="form-actions">
+                                <label class="remember-me">
+                                    <input type="checkbox"
+                                        style="position:relative; width:auto; height:auto; margin-right:8px; accent-color: var(--gold);">
+                                    Remember Me
+                                </label>
+                                <a href="404page.html" class="forgot-pass">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn-primary">AUTHENTICATE PLAY</button>
+                        </form>
+
+                        <div class="social-divider"><span>OR CONNECT WITH</span></div>
+                        <div class="social-icons">
+                            <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="404page.html"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                        <p class="switch-text">New Combatant? <span onclick="switchForm('register')">Create
+                                Account</span>
+                        </p>
+                    </div>
+
+                    <div id="registerSection" class="form-section">
+                        <h2>Enlist Warrior ⚔️</h2>
+                        <p class="subtitle">Register records on global server nodes.</p>
+
+                        <form id="registerForm" novalidate>
+                            <div class="input-group">
+                                <label>Gamer Name</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-user-ninja icon-left"></i>
+                                    <input type="text" id="regName">
+                                </div>
+                                <div id="regNameErr" class="error-msg"></div>
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-envelope icon-left"></i>
+                                    <input type="email" id="regEmail">
+                                </div>
+                                <div id="regEmailErr" class="error-msg"></div>
+                            </div>
+                            <div class="input-group">
+                                <label>Create Password</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-lock icon-left"></i>
+                                    <input type="password" id="regPass">
+                                    <i class="fa-solid fa-eye icon-right" onclick="togglePass('regPass', this)"></i>
+                                </div>
+                                <div id="regPassErr" class="error-msg"></div>
+                            </div>
+                            <div class="input-group">
+                                <label>Confirm Password</label>
+                                <div class="input-field-wrapper">
+                                    <i class="fa-solid fa-shield-halved icon-left"></i>
+                                    <input type="password" id="regConfirmPass">
+                                    <i class="fa-solid fa-eye icon-right"
+                                        onclick="togglePass('regConfirmPass', this)"></i>
+                                </div>
+                                <div id="regConfirmErr" class="error-msg"></div>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="margin-top: 10px;">PROVISION
+                                ACCOUNT</button>
+                        </form>
+                        <p class="switch-text" style="margin-top: 20px;">Already enlisted? <span
+                                onclick="switchForm('login')">Sign In</span></p>
+                    </div>
+
+                </div>
+
+                <div class="graphic-side">
+                    <div class="rgb-glow"></div>
+                    <div class="floating-character"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="glass-card-info">
+                        <span class="badge">SERVERS: ONLINE</span>
+                        <h3>STACKLY MATRIX ENGINE</h3>
+                        <p>Low latency processing framework initialized for strategic tier-1 esports.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectRole(role) {
+            document.getElementById('selectedRole').value = role;
+            document.getElementById('rolePlayer').classList.remove('active');
+            document.getElementById('roleAdmin').classList.remove('active');
+
+            if (role === 'player') {
+                document.getElementById('rolePlayer').classList.add('active');
+            } else {
+                document.getElementById('roleAdmin').classList.add('active');
+            }
+        }
+
+        function switchForm(target) {
+            document.getElementById('loginSection').classList.remove('active');
+            document.getElementById('registerSection').classList.remove('active');
+            document.querySelectorAll('.error-msg').forEach(el => el.innerHTML = "");
+
+            setTimeout(() => {
+                document.getElementById(target + 'Section').classList.add('active');
+            }, 200);
+        }
+
+        function togglePass(id, icon) {
+            const field = document.getElementById(id);
+            if (field.type === 'password') { field.type = 'text'; icon.classList.replace('fa-eye', 'fa-eye-slash'); }
+            else { field.type = 'password'; icon.classList.replace('fa-eye-slash', 'fa-eye'); }
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const email = document.getElementById('loginEmail').value.trim();
+            const pass = document.getElementById('loginPass').value.trim();
+            const role = document.getElementById('selectedRole').value;
+
+            const emailErr = document.getElementById('loginEmailErr');
+            const passErr = document.getElementById('loginPassErr');
+
+            emailErr.innerHTML = ""; passErr.innerHTML = "";
+
+            if (!email) { emailErr.innerHTML = "<i class='fa-solid fa-circle-exclamation'></i> Email is required."; isValid = false; }
+            else if (!emailRegex.test(email)) { emailErr.innerHTML = "<i class='fa-solid fa-circle-exclamation'></i> Invalid email format."; isValid = false; }
+
+            if (!pass) { passErr.innerHTML = "<i class='fa-solid fa-circle-exclamation'></i> Password is required."; isValid = false; }
+
+            if (isValid) {
+                const gamerName = email.split('@')[0];
+
+                if (role === 'admin') {
+                    window.location.href = `dashboard2.html?email=${encodeURIComponent(email)}`;
+                } else {
+                    window.location.href = `dashboard1.html?name=${encodeURIComponent(gamerName)}&email=${encodeURIComponent(email)}`;
+                }
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const name = document.getElementById('regName').value.trim();
+            const email = document.getElementById('regEmail').value.trim();
+            const pass = document.getElementById('regPass').value;
+            const confirmPass = document.getElementById('regConfirmPass').value;
+
+            const nameErr = document.getElementById('regNameErr');
+            const emailErr = document.getElementById('regEmailErr');
+            const passErr = document.getElementById('regPassErr');
+            const confirmErr = document.getElementById('regConfirmErr');
+
+            nameErr.innerHTML = ""; emailErr.innerHTML = ""; passErr.innerHTML = ""; confirmErr.innerHTML = "";
+
+            if (!name) { nameErr.innerHTML = "Gamer Name is required."; isValid = false; }
+
+            if (!email) { emailErr.innerHTML = "Email is required."; isValid = false; }
+            else if (!emailRegex.test(email)) { emailErr.innerHTML = "Invalid email format."; isValid = false; }
+
+            if (!pass) { passErr.innerHTML = "Password is required."; isValid = false; }
+            else if (pass.length < 6) { passErr.innerHTML = "Must be at least 6 characters."; isValid = false; }
+
+            if (!confirmPass) { confirmErr.innerHTML = "Confirm your password."; isValid = false; }
+            else if (pass !== confirmPass) { confirmErr.innerHTML = "Passwords do not match."; isValid = false; }
+
+            if (isValid) {
+                alert(`Welcome ${name}! Your combatant profile is created. Please Login.`);
+                document.getElementById('registerForm').reset();
+                switchForm('login');
+            }
+        });
+    </script>
+</body>
+
+</html>

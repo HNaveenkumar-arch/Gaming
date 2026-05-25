@@ -1,0 +1,1466 @@
+/* =========================================
+   ABOUT PAGE: PRO HERO SECTION
+   ========================================= */
+.about-hero-pro {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Deep Navy Blue Background with Image */
+  background: #030508
+    url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80")
+    center/cover no-repeat;
+  padding: 120px 8% 50px; /* Top padding extra for Navbar */
+  overflow: hidden;
+}
+
+/* Dark Gradient Overlay for text visibility */
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 5, 8, 0.95) 0%,
+    rgba(3, 5, 8, 0.8) 50%,
+    rgba(3, 5, 8, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+#particleCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- Breadcrumb Styling (Home >> About) --- */
+.breadcrumb-pro {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(13, 21, 39, 0.7); /* Glassmorphism Navy */
+  padding: 10px 25px;
+  border-radius: 6px;
+  border-left: 4px solid #d4af37; /* Gold Accent */
+  margin-bottom: 30px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.breadcrumb-pro a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.breadcrumb-pro a:hover {
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+.breadcrumb-pro i {
+  color: #d4af37;
+  font-size: 0.85rem;
+}
+
+.breadcrumb-pro .active {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+/* --- Titles & Text (Neon Gold & White) --- */
+.gold-subtitle {
+  color: #d4af37;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.neon-heading {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.hero-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 650px;
+}
+
+.hero-desc strong {
+  color: #fff;
+}
+
+/* --- Glow CTA Button --- */
+.btn-glow-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 40px;
+  background: rgba(13, 21, 39, 0.8);
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  color: #d4af37;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.4s;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.btn-glow-explore:hover {
+  background: #d4af37;
+  color: #030508;
+  box-shadow: 0 0 35px #d4af37;
+  transform: translateY(-5px);
+}
+
+/* --- 3D Character Floating Effect --- */
+.about-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-character {
+  width: 100%;
+  max-width: 550px;
+  animation: floatChar 4s ease-in-out infinite;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes floatChar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Gold Glow behind the character */
+.visual-glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.4) 0%,
+    transparent 70%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: blur(40px);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .neon-heading {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-desc,
+  .breadcrumb-pro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(3, 5, 8, 0.95) 0%,
+      rgba(3, 5, 8, 0.85) 60%,
+      rgba(3, 5, 8, 0.5) 100%
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-pro {
+    min-height: auto;
+    padding: 130px 5% 80px;
+  }
+  .neon-heading {
+    font-size: 2.3rem;
+  }
+  .gold-subtitle {
+    font-size: 1rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  .btn-glow-explore {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  .floating-character {
+    max-width: 320px;
+    margin-top: 20px;
+  }
+}
+
+/* =========================================
+   SECTION 2: OUR STORY (ABOUT PAGE)
+   ========================================= */
+.story-section {
+  padding: 100px 8%;
+  background: #030508;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* --- Left Side: Overlapping Image Effects --- */
+.story-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.story-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 500px;
+}
+
+.story-img {
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.main-img {
+  width: 85%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sub-img {
+  width: 65%;
+  height: 60%;
+  bottom: 0;
+  right: 0;
+  border: 2px solid var(--theme-gold);
+  z-index: 2;
+}
+
+/* Floating Animation for Sub Image */
+.floating-img {
+  animation: storyFloat 4s ease-in-out infinite;
+}
+
+@keyframes storyFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Neon background aura behind images */
+.story-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    transparent 70%
+  );
+  top: 20%;
+  left: 10%;
+  z-index: 0;
+  filter: blur(30px);
+}
+
+/* --- Right Side: Timeline Track Layout --- */
+.story-content {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 30px;
+  border-left: 2px dashed rgba(212, 175, 55, 0.3); /* Center track line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Golden Node Bullet Point */
+.timeline-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--theme-gold);
+  border-radius: 50%;
+  left: -38px;
+  top: 25px;
+  box-shadow: 0 0 10px var(--theme-gold);
+  transition: transform 0.3s ease;
+}
+
+/* --- Glassmorphism Milestone Card --- */
+.glass-story-card {
+  background: rgba(13, 21, 39, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 12px;
+  padding: 20px 25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  color: var(--theme-gold);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.glass-story-card h4 {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.glass-story-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Interactive Card Effects */
+.timeline-item:hover .glass-story-card {
+  border-color: var(--theme-gold);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+  transform: translateX(10px);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.4);
+  background: #fff;
+  box-shadow: 0 0 15px #fff;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE STRATEGY
+   ========================================= */
+@media (max-width: 992px) {
+  .story-container {
+    grid-template-columns: 1fr; /* Side-by-side switches to vertical stack */
+    gap: 60px;
+  }
+  .story-img-wrapper {
+    height: 420px; /* Reduces heights slightly to save space */
+  }
+}
+
+@media (max-width: 600px) {
+  .story-section {
+    padding: 80px 5%;
+  }
+  .story-img-wrapper {
+    height: 340px;
+    max-width: 340px;
+  }
+  .timeline {
+    padding-left: 20px; /* Squeezes timeline inwards for tiny screens */
+  }
+  .timeline-dot {
+    left: -28px;
+  }
+  .glass-story-card {
+    padding: 15px 18px;
+  }
+  .glass-story-card h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================================
+   SECTION 3: MISSION & VISION
+   ========================================= */
+.mission-vision-section {
+  padding: 100px 8%;
+  /* Gradient Background: Dark blue to subtle gold glow at bottom */
+  background: radial-gradient(
+    circle at 50% 100%,
+    rgba(212, 175, 55, 0.08) 0%,
+    #030508 60%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mv-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dual Layout */
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Neon Glassmorphism Card --- */
+.neon-card {
+  background: rgba(13, 21, 39, 0.6);
+  border: 2px solid rgba(212, 175, 55, 0.15);
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(12px);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+/* Hover Effect: Neon Border Glow */
+.neon-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--theme-gold);
+  box-shadow:
+    0 15px 35px rgba(212, 175, 55, 0.25),
+    inset 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+/* --- Animated Icons Box --- */
+.card-icon-box {
+  width: 80px;
+  height: 80px;
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+  border: 1px dashed var(--theme-gold);
+  transition: all 0.5s ease;
+}
+
+.animated-icon {
+  font-size: 2rem;
+  color: var(--theme-gold);
+  transition: all 0.5s ease;
+}
+
+/* Card Hover -> Icon changes color and animates */
+.neon-card:hover .card-icon-box {
+  background: var(--theme-gold);
+  border-style: solid;
+  box-shadow: 0 0 20px var(--theme-gold);
+}
+
+.neon-card:hover .animated-icon {
+  color: var(--bg-navy);
+  animation: iconShake 0.4s ease infinite alternate; /* The ⚡ Shake Animation */
+}
+
+@keyframes iconShake {
+  0% {
+    transform: scale(1) rotate(-8deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(8deg);
+  }
+}
+
+/* --- Typography --- */
+.card-title {
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .mv-cards-wrapper {
+    grid-template-columns: 1fr; /* Switches to single column on tablets */
+    gap: 40px;
+    max-width: 600px; /* Limits width so it doesn't stretch too much */
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-section {
+    padding: 80px 5%;
+  }
+  .neon-card {
+    padding: 40px 25px;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   SECTION 4: GAMING FEATURES (NAVY & GOLD GLOW)
+   ========================================= */
+.features-section {
+  padding: 100px 8%;
+  /* Deep Navy Blue Background with subtle Gold glow at the top */
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(212, 175, 55, 0.05) 0%,
+    #030508 70%
+  );
+  position: relative;
+}
+
+.features-header {
+  text-align: center;
+}
+
+/* --- Grid Layout --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Navy & Gold Glowing Border Magic --- */
+.feature-card-wrapper {
+  position: relative;
+  border-radius: 16px;
+  padding: 2px;
+  background: rgba(212, 175, 55, 0.15); /* Default subtle gold border */
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+/* Pure Gold & Navy Gradient Animation */
+.feature-card-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  /* Navy, Gold, White, Gold, Navy sweeping effect */
+  background: linear-gradient(
+    60deg,
+    #030508,
+    var(--theme-gold),
+    #ffffff,
+    var(--theme-gold),
+    #030508
+  );
+  background-size: 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: goldGlowAnim 3s linear infinite;
+}
+
+@keyframes goldGlowAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Inner Card Structure (Fixed Layout) */
+.feature-card {
+  background: rgba(13, 21, 39, 0.95); /* Deep Navy inside */
+  height: 100%;
+  border-radius: 15px;
+  padding: 40px 30px;
+  /* Keeps items stacked vertically and centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease;
+}
+
+/* --- Hover Effects --- */
+.feature-card-wrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); /* Gold outer glow */
+}
+
+/* Trigger Gold glow on hover */
+.feature-card-wrapper:hover::before {
+  opacity: 1;
+}
+
+/* --- Card Icon Box --- */
+.feature-icon-box {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0; /* Prevents icon from becoming oval */
+  background: rgba(212, 175, 55, 0.08); /* Subtle gold background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  font-size: 2rem;
+  color: var(--theme-gold);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  /* Transition update for smooth rotation */
+  transition:
+    transform 0.6s ease-in-out,
+    background 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Icon rotates on Hover (Desktop) AND Active/Touch (Mobile) */
+.feature-card-wrapper:hover .feature-icon-box,
+.feature-card-wrapper:active .feature-icon-box {
+  background: var(--theme-gold);
+  color: #030508; /* Icon turns Navy Blue */
+  border-color: var(--theme-gold);
+  transform: rotate(360deg); /* 360 Degree Rotation */
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.feature-card h4 {
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .features-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 80px 20px; /* Side gap fixed */
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px; /* Extra safe space on sides */
+  }
+  .feature-card {
+    padding: 30px 20px; /* Perfect inner card space */
+  }
+  .feature-icon-box {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  .feature-card h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================================
+   SECTION 5: TEAM SECTION (FLIP CARDS)
+   ========================================= */
+.team-section {
+  padding: 100px 8%;
+  background: #030508;
+  position: relative;
+}
+
+.team-header {
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns for desktop */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Flip Card Container Magic --- */
+.team-card {
+  background: transparent;
+  width: 100%;
+  height: 380px; /* Fixed height is required for 3D flip */
+  perspective: 1000px; /* Gives the 3D depth */
+  cursor: pointer;
+}
+
+/* The inner wrapper that actually rotates */
+.team-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy smooth flip */
+  transform-style: preserve-3d;
+}
+
+/* Hover/Touch triggers the flip */
+.team-card:hover .team-card-inner,
+.team-card:active .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Common styles for Front and Back */
+.team-front,
+.team-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Hides the back side when facing away */
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Card Front Styles --- */
+.team-front {
+  background: rgba(13, 21, 39, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Circular Image */
+.team-img-box {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  padding: 4px;
+  background: linear-gradient(
+    45deg,
+    var(--theme-gold),
+    transparent,
+    var(--theme-gold)
+  );
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.team-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #030508; /* Creates a gap effect */
+}
+
+.team-front h4 {
+  color: var(--text-light);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.team-role {
+  color: var(--theme-gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- Card Back Styles --- */
+.team-back {
+  background: linear-gradient(
+    145deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(13, 21, 39, 0.95)
+  );
+  border: 2px solid var(--theme-gold);
+  transform: rotateY(180deg); /* This is initially facing backwards */
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+}
+
+.team-back h4 {
+  color: var(--theme-gold);
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.team-back .bio {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  padding: 0 10px;
+}
+
+/* Social Icons */
+.team-social {
+  display: flex;
+  gap: 15px;
+}
+
+.team-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(13, 21, 39, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+  background: var(--theme-gold);
+  color: #030508;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 80px 20px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    max-width: 350px;
+    gap: 30px;
+  }
+  .team-card {
+    height: 350px; /* Slightly smaller height for mobile */
+  }
+}
+
+/* =========================================
+   SECTION 6: SPLIT SCREEN TESTIMONIAL
+   ========================================= */
+.split-testi-section {
+  padding: 100px 8%;
+  background: #050810;
+  position: relative;
+  overflow: hidden;
+}
+
+.split-testi-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* --- Left Side: Visual Setup --- */
+.split-testi-visual {
+  position: relative;
+  width: 100%;
+}
+.visual-wrapper {
+  position: relative;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.gamer-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.visual-glow-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-gold);
+  top: 15px;
+  left: -15px;
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0.15;
+  filter: blur(15px);
+}
+
+.floating-badge {
+  position: absolute;
+  bottom: 30px;
+  right: -25px;
+  background: rgba(13, 21, 39, 0.95);
+  border: 1px solid var(--theme-gold);
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+  animation: badgeFloat 3.5s ease-in-out infinite;
+  backdrop-filter: blur(8px);
+}
+
+.floating-badge i {
+  color: var(--theme-gold);
+  font-size: 1.4rem;
+}
+.floating-badge span {
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* --- Right Side: Content Setup --- */
+.split-testi-content {
+  position: relative;
+  padding-left: 20px;
+}
+
+.bg-quote-anim {
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  font-size: 12rem;
+  color: rgba(212, 175, 55, 0.04);
+  z-index: 0;
+  animation: pulseQuote 4s infinite alternate ease-in-out;
+}
+
+@keyframes pulseQuote {
+  0% {
+    transform: scale(1);
+    opacity: 0.03;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 0.08;
+  }
+}
+
+.review-box {
+  position: relative;
+  z-index: 1;
+  margin-top: 35px;
+  background: rgba(212, 175, 55, 0.03);
+  border-left: 3px solid var(--theme-gold);
+  padding: 30px 40px;
+  border-radius: 0 16px 16px 0;
+}
+
+/* --- Review Slider Magic --- */
+.review-item {
+  display: none;
+  animation: fadeReviewIn 0.6s ease-in-out;
+}
+.review-item.active {
+  display: block;
+}
+
+@keyframes fadeReviewIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.star-rating {
+  color: var(--theme-gold);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  display: flex;
+  gap: 6px;
+}
+.review-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.reviewer-avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--theme-gold);
+}
+.reviewer-name {
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+.reviewer-handle {
+  color: var(--theme-gold);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* --- Advanced Touch Controls (Arrows + Dots) --- */
+.review-controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.review-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Dots */
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.2);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.slider-dot.active {
+  background: var(--theme-gold);
+  width: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+.slider-dot:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Arrow Buttons */
+.slider-arrow {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--theme-gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  font-size: 1rem;
+}
+
+.slider-arrow:hover {
+  background: var(--theme-gold);
+  color: #030508;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  transform: scale(1.1);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .split-testi-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 60px;
+  }
+  .split-testi-content {
+    padding-left: 0;
+  }
+  .bg-quote-anim {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .review-box {
+    border-left: none;
+    border-top: 3px solid var(--theme-gold);
+    border-radius: 0 0 16px 16px;
+    padding: 30px 20px;
+  }
+  .star-rating,
+  .review-controls-wrapper {
+    justify-content: center;
+  }
+  .reviewer-info {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .floating-badge {
+    right: 10px;
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-testi-section {
+    padding: 80px 5%;
+  }
+  .review-text {
+    font-size: 1.05rem;
+  }
+  .bg-quote-anim {
+    font-size: 8rem;
+  }
+  .floating-badge {
+    padding: 10px 15px;
+  }
+  .floating-badge i {
+    font-size: 1.1rem;
+  }
+  .floating-badge span {
+    font-size: 0.85rem;
+  }
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================================
+   SECTION 8: CTA / JOIN COMMUNITY
+   ========================================= */
+.cta-section {
+  padding: 120px 8%;
+  background: radial-gradient(
+    circle at center,
+    rgba(13, 21, 39, 1) 0%,
+    #030508 100%
+  );
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.cta-container {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Cyberpunk Typography --- */
+.neon-title {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 30px rgba(212, 175, 55, 0.4);
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.cta-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* --- Glow Buttons --- */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Primary Button (Solid Gold) */
+.btn-glow-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--theme-gold);
+  color: #030508;
+  padding: 16px 35px;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.btn-glow-primary:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+  background: #fff;
+  color: var(--theme-gold);
+}
+
+/* Secondary Button (Outline Glow) */
+.btn-glow-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(13, 21, 39, 0.6);
+  border: 2px solid var(--theme-gold);
+  color: var(--theme-gold);
+  padding: 16px 35px;
+  border-radius: 8px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.btn-glow-secondary:hover {
+  transform: translateY(-5px);
+  background: var(--theme-gold);
+  color: #030508;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+/* --- Animated Floating Background Icons --- */
+.floating-icons-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.float-icon {
+  position: absolute;
+  color: rgba(212, 175, 55, 0.05); /* Extremely dull gold */
+  font-size: 4rem;
+  animation: driftFloat 10s linear infinite alternate;
+}
+
+.icon-1 {
+  top: 15%;
+  left: 10%;
+  font-size: 5rem;
+  animation-duration: 12s;
+}
+.icon-2 {
+  bottom: 20%;
+  left: 15%;
+  font-size: 6rem;
+  animation-duration: 15s;
+}
+.icon-3 {
+  top: 20%;
+  right: 12%;
+  font-size: 4.5rem;
+  animation-duration: 14s;
+}
+.icon-4 {
+  bottom: 25%;
+  right: 10%;
+  font-size: 5.5rem;
+  animation-duration: 11s;
+}
+.icon-5 {
+  top: 50%;
+  left: 5%;
+  font-size: 3rem;
+  animation-duration: 18s;
+}
+.icon-6 {
+  top: 40%;
+  right: 5%;
+  font-size: 3.5rem;
+  animation-duration: 16s;
+}
+
+@keyframes driftFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-30px) rotate(20deg);
+  }
+}
+
+/* --- Cyberpunk Grid Overlay --- */
+.cyber-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px; /* Adjust grid size */
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .neon-title {
+    font-size: 3rem;
+  }
+  .cta-buttons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 90px 5%;
+  }
+  .neon-title {
+    font-size: 2.2rem;
+  }
+  .cta-desc {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 15px;
+  }
+  .btn-glow-primary,
+  .btn-glow-secondary {
+    width: 100%; /* Full width buttons */
+    justify-content: center;
+  }
+
+  .float-icon {
+    font-size: 3rem !important;
+  }
+}
