@@ -1,15 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 0. INITIALIZE AOS ANIMATIONS
-    // ==========================================
     if (typeof AOS !== 'undefined') {
         AOS.init({ once: true, offset: 100 });
     }
 
-    // ==========================================
-    // 1. PRELOADER & APP INIT LOGIC
-    // ==========================================
     const preloader = document.getElementById('preloader');
     const mainApp = document.getElementById('mainApp');
 
@@ -25,9 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    // ==========================================
-    // 2. HAMBURGER MENU LOGIC
-    // ==========================================
     const burger = document.getElementById('burgerMenu');
     const menuWrapper = document.getElementById('menuWrapper');
 
@@ -61,9 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 3. HERO CAROUSEL LOGIC
-    // ==========================================
     let slideIndex = 0;
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.dot');
@@ -93,9 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // ==========================================
-    // 4. ANIMATED PARTICLES SYSTEM
-    // ==========================================
     const canvas = document.getElementById('particleCanvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
@@ -153,9 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
         animateParticles();
     }
 
-    // ==========================================
-    // 5. FEATURED GAMES CAROUSEL
-    // ==========================================
     const gamesSlider = document.getElementById('gamesSlider');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
@@ -166,23 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
         prevBtn.addEventListener('click', () => { gamesSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); });
     }
 
-    // ==========================================
-    // 6. LIVE TOURNAMENTS TIMER
-    // ==========================================
     function updateTimer() {
         const timerElement = document.getElementById('timer1');
         if (timerElement) { timerElement.innerText = "01:24:59"; }
     }
     setInterval(updateTimer, 1000);
-    // ==========================================
-    // 7. STATS SECTION: COUNTERS & PROGRESS BARS
-    // ==========================================
     const statsSection = document.querySelector('.stats-section');
     const counters = document.querySelectorAll('.counter');
     const progressFills = document.querySelectorAll('.progress-fill');
 
     if (statsSection && counters.length > 0) {
-        // threshold 0.3 la irundhu 0.1 kku maathiyachu (Mobile fix)
         const statsObserver = new IntersectionObserver((entries, observer) => {
             const [entry] = entries;
 
@@ -212,13 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 observer.unobserve(statsSection);
             }
-        }, { threshold: 0.1 }); // <--- FIX INGA DHAAN IRUKKU
+        }, { threshold: 0.1 }); 
 
         statsObserver.observe(statsSection);
     }
-    // ==========================================
-    // 8. 3D TESTIMONIAL CARD STACK LOGIC
-    // ==========================================
     const cards = document.querySelectorAll('.testi-3d-card');
     const stackPrevBtn = document.getElementById('stackPrev');
     const stackNextBtn = document.getElementById('stackNext');
@@ -229,14 +201,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cards.length === 0) return;
         let stt = 0;
 
-        // Center Active Card
         cards[activeIndex].style.transform = `translateX(0px) scale(1) perspective(1000px)`;
         cards[activeIndex].style.zIndex = 10;
         cards[activeIndex].style.filter = 'blur(0px)';
         cards[activeIndex].style.opacity = 1;
         cards[activeIndex].style.boxShadow = '0 15px 40px rgba(212, 175, 55, 0.2)';
 
-        // Cards to the Right
         for (let i = activeIndex + 1; i < cards.length; i++) {
             stt++;
             cards[i].style.transform = `translateX(${160 * stt}px) scale(${1 - 0.2 * stt}) perspective(1000px) rotateY(-15deg)`;
@@ -248,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         stt = 0;
 
-        // Cards to the Left
         for (let i = activeIndex - 1; i >= 0; i--) {
             stt++;
             cards[i].style.transform = `translateX(${-160 * stt}px) scale(${1 - 0.2 * stt}) perspective(1000px) rotateY(15deg)`;

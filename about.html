@@ -612,9 +612,9 @@
             <div class="bottom-container">
                 <p class="copyright-text">© 2026 Stackly Gaming. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="#">Terms & Conditions</a>
+                    <a href="404page.html">Terms & Conditions</a>
                     <span class="divider">|</span>
-                    <a href="#">Privacy Policy</a>
+                    <a href="404page.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -629,7 +629,6 @@
         function validateAndRedirect() {
             const emailInput = document.getElementById('footerEmail');
 
-            // ஈமெயில் ஃபீல்டு காலியா இல்லாம, வேலிடா இருந்தா மட்டும் 404 பேஜுக்கு போகும்
             if (emailInput.value.trim() !== "" && emailInput.checkValidity()) {
                 window.location.href = '404page.html';
             }
@@ -638,11 +637,9 @@
         const totalReviews = 3;
 
         function updateSlider() {
-            // Hide all reviews and remove active dots
             document.querySelectorAll('.review-item').forEach(r => r.classList.remove('active'));
             document.querySelectorAll('.slider-dot').forEach(d => d.classList.remove('active'));
 
-            // Show clicked review and active dot
             document.getElementById(`review-${currentReview}`).classList.add('active');
             document.querySelectorAll('.slider-dot')[currentReview - 1].classList.add('active');
         }

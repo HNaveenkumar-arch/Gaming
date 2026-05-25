@@ -1,21 +1,16 @@
-/* =========================================
-   ABOUT PAGE: PRO HERO SECTION
-   ========================================= */
 .about-hero-pro {
   position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  /* Deep Navy Blue Background with Image */
   background: #030508
     url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1920&q=80")
     center/cover no-repeat;
-  padding: 120px 8% 50px; /* Top padding extra for Navbar */
+  padding: 120px 8% 50px;
   overflow: hidden;
 }
 
-/* Dark Gradient Overlay for text visibility */
 .about-hero-overlay {
   position: absolute;
   inset: 0;
@@ -47,15 +42,14 @@
   width: 100%;
 }
 
-/* --- Breadcrumb Styling (Home >> About) --- */
 .breadcrumb-pro {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(13, 21, 39, 0.7); /* Glassmorphism Navy */
+  background: rgba(13, 21, 39, 0.7);
   padding: 10px 25px;
   border-radius: 6px;
-  border-left: 4px solid #d4af37; /* Gold Accent */
+  border-left: 4px solid #d4af37;
   margin-bottom: 30px;
   font-family: "Orbitron", sans-serif;
   font-size: 1.05rem;
@@ -85,7 +79,6 @@
   font-weight: 700;
 }
 
-/* --- Titles & Text (Neon Gold & White) --- */
 .gold-subtitle {
   color: #d4af37;
   font-size: 1.2rem;
@@ -120,7 +113,6 @@
   color: #fff;
 }
 
-/* --- Glow CTA Button --- */
 .btn-glow-explore {
   display: inline-flex;
   align-items: center;
@@ -145,7 +137,6 @@
   transform: translateY(-5px);
 }
 
-/* --- 3D Character Floating Effect --- */
 .about-hero-visual {
   position: relative;
   display: flex;
@@ -175,7 +166,6 @@
   }
 }
 
-/* Gold Glow behind the character */
 .visual-glow {
   position: absolute;
   width: 350px;
@@ -192,9 +182,6 @@
   filter: blur(40px);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 1024px) {
   .neon-heading {
     font-size: 3.2rem;
@@ -249,9 +236,6 @@
   }
 }
 
-/* =========================================
-   SECTION 2: OUR STORY (ABOUT PAGE)
-   ========================================= */
 .story-section {
   padding: 100px 8%;
   background: #030508;
@@ -268,7 +252,6 @@
   margin: 0 auto;
 }
 
-/* --- Left Side: Overlapping Image Effects --- */
 .story-visual {
   position: relative;
   width: 100%;
@@ -308,7 +291,6 @@
   z-index: 2;
 }
 
-/* Floating Animation for Sub Image */
 .floating-img {
   animation: storyFloat 4s ease-in-out infinite;
 }
@@ -326,7 +308,6 @@
   }
 }
 
-/* Neon background aura behind images */
 .story-glow {
   position: absolute;
   width: 300px;
@@ -342,7 +323,6 @@
   filter: blur(30px);
 }
 
-/* --- Right Side: Timeline Track Layout --- */
 .story-content {
   position: relative;
 }
@@ -351,7 +331,7 @@
   position: relative;
   margin-top: 40px;
   padding-left: 30px;
-  border-left: 2px dashed rgba(212, 175, 55, 0.3); /* Center track line */
+  border-left: 2px dashed rgba(212, 175, 55, 0.3);
 }
 
 .timeline-item {
@@ -363,7 +343,6 @@
   margin-bottom: 0;
 }
 
-/* Golden Node Bullet Point */
 .timeline-dot {
   position: absolute;
   width: 14px;
@@ -376,7 +355,6 @@
   transition: transform 0.3s ease;
 }
 
-/* --- Glassmorphism Milestone Card --- */
 .glass-story-card {
   background: rgba(13, 21, 39, 0.45);
   border: 1px solid rgba(212, 175, 55, 0.12);
@@ -407,7 +385,6 @@
   line-height: 1.6;
 }
 
-/* Interactive Card Effects */
 .timeline-item:hover .glass-story-card {
   border-color: var(--theme-gold);
   box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
@@ -420,16 +397,13 @@
   box-shadow: 0 0 15px #fff;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE STRATEGY
-   ========================================= */
 @media (max-width: 992px) {
   .story-container {
-    grid-template-columns: 1fr; /* Side-by-side switches to vertical stack */
+    grid-template-columns: 1fr;
     gap: 60px;
   }
   .story-img-wrapper {
-    height: 420px; /* Reduces heights slightly to save space */
+    height: 420px;
   }
 }
 
@@ -442,7 +416,7 @@
     max-width: 340px;
   }
   .timeline {
-    padding-left: 20px; /* Squeezes timeline inwards for tiny screens */
+    padding-left: 20px;
   }
   .timeline-dot {
     left: -28px;
@@ -455,12 +429,8 @@
   }
 }
 
-/* =========================================
-   SECTION 3: MISSION & VISION
-   ========================================= */
 .mission-vision-section {
   padding: 100px 8%;
-  /* Gradient Background: Dark blue to subtle gold glow at bottom */
   background: radial-gradient(
     circle at 50% 100%,
     rgba(212, 175, 55, 0.08) 0%,
@@ -477,13 +447,12 @@
 
 .mv-cards-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dual Layout */
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* --- Neon Glassmorphism Card --- */
 .neon-card {
   background: rgba(13, 21, 39, 0.6);
   border: 2px solid rgba(212, 175, 55, 0.15);
@@ -496,7 +465,6 @@
   z-index: 1;
 }
 
-/* Hover Effect: Neon Border Glow */
 .neon-card:hover {
   transform: translateY(-12px);
   border-color: var(--theme-gold);
@@ -505,7 +473,6 @@
     inset 0 0 15px rgba(212, 175, 55, 0.1);
 }
 
-/* --- Animated Icons Box --- */
 .card-icon-box {
   width: 80px;
   height: 80px;
@@ -525,7 +492,6 @@
   transition: all 0.5s ease;
 }
 
-/* Card Hover -> Icon changes color and animates */
 .neon-card:hover .card-icon-box {
   background: var(--theme-gold);
   border-style: solid;
@@ -534,7 +500,7 @@
 
 .neon-card:hover .animated-icon {
   color: var(--bg-navy);
-  animation: iconShake 0.4s ease infinite alternate; /* The ⚡ Shake Animation */
+  animation: iconShake 0.4s ease infinite alternate;
 }
 
 @keyframes iconShake {
@@ -546,7 +512,6 @@
   }
 }
 
-/* --- Typography --- */
 .card-title {
   color: var(--text-light);
   font-family: "Orbitron", sans-serif;
@@ -561,14 +526,11 @@
   line-height: 1.8;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .mv-cards-wrapper {
-    grid-template-columns: 1fr; /* Switches to single column on tablets */
+    grid-template-columns: 1fr;
     gap: 40px;
-    max-width: 600px; /* Limits width so it doesn't stretch too much */
+    max-width: 600px;
   }
 }
 
@@ -587,12 +549,8 @@
   }
 }
 
-/* =========================================
-   SECTION 4: GAMING FEATURES (NAVY & GOLD GLOW)
-   ========================================= */
 .features-section {
   padding: 100px 8%;
-  /* Deep Navy Blue Background with subtle Gold glow at the top */
   background: radial-gradient(
     circle at 50% 0%,
     rgba(212, 175, 55, 0.05) 0%,
@@ -605,7 +563,6 @@
   text-align: center;
 }
 
-/* --- Grid Layout --- */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -614,23 +571,20 @@
   margin: 0 auto;
 }
 
-/* --- Navy & Gold Glowing Border Magic --- */
 .feature-card-wrapper {
   position: relative;
   border-radius: 16px;
   padding: 2px;
-  background: rgba(212, 175, 55, 0.15); /* Default subtle gold border */
+  background: rgba(212, 175, 55, 0.15);
   transition: all 0.4s ease;
   z-index: 1;
 }
 
-/* Pure Gold & Navy Gradient Animation */
 .feature-card-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 16px;
-  /* Navy, Gold, White, Gold, Navy sweeping effect */
   background: linear-gradient(
     60deg,
     #030508,
@@ -658,13 +612,11 @@
   }
 }
 
-/* Inner Card Structure (Fixed Layout) */
 .feature-card {
-  background: rgba(13, 21, 39, 0.95); /* Deep Navy inside */
+  background: rgba(13, 21, 39, 0.95);
   height: 100%;
   border-radius: 15px;
   padding: 40px 30px;
-  /* Keeps items stacked vertically and centered */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -674,23 +626,20 @@
   transition: transform 0.4s ease;
 }
 
-/* --- Hover Effects --- */
 .feature-card-wrapper:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3); /* Gold outer glow */
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
 }
 
-/* Trigger Gold glow on hover */
 .feature-card-wrapper:hover::before {
   opacity: 1;
 }
 
-/* --- Card Icon Box --- */
 .feature-icon-box {
   width: 70px;
   height: 70px;
-  flex-shrink: 0; /* Prevents icon from becoming oval */
-  background: rgba(212, 175, 55, 0.08); /* Subtle gold background */
+  flex-shrink: 0;
+  background: rgba(212, 175, 55, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -699,7 +648,6 @@
   font-size: 2rem;
   color: var(--theme-gold);
   border: 1px solid rgba(212, 175, 55, 0.2);
-  /* Transition update for smooth rotation */
   transition:
     transform 0.6s ease-in-out,
     background 0.4s ease,
@@ -707,13 +655,12 @@
     box-shadow 0.4s ease;
 }
 
-/* Icon rotates on Hover (Desktop) AND Active/Touch (Mobile) */
 .feature-card-wrapper:hover .feature-icon-box,
 .feature-card-wrapper:active .feature-icon-box {
   background: var(--theme-gold);
-  color: #030508; /* Icon turns Navy Blue */
+  color: #030508;
   border-color: var(--theme-gold);
-  transform: rotate(360deg); /* 360 Degree Rotation */
+  transform: rotate(360deg);
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
 }
 
@@ -731,9 +678,6 @@
   line-height: 1.7;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .features-grid {
     gap: 30px;
@@ -742,15 +686,15 @@
 
 @media (max-width: 768px) {
   .features-section {
-    padding: 80px 20px; /* Side gap fixed */
+    padding: 80px 20px;
   }
   .features-grid {
     grid-template-columns: 1fr;
     gap: 25px;
-    padding: 0 10px; /* Extra safe space on sides */
+    padding: 0 10px;
   }
   .feature-card {
-    padding: 30px 20px; /* Perfect inner card space */
+    padding: 30px 20px;
   }
   .feature-icon-box {
     width: 60px;
@@ -762,9 +706,6 @@
   }
 }
 
-/* =========================================
-   SECTION 5: TEAM SECTION (FLIP CARDS)
-   ========================================= */
 .team-section {
   padding: 100px 8%;
   background: #030508;
@@ -777,44 +718,40 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 Columns for desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* --- Flip Card Container Magic --- */
 .team-card {
   background: transparent;
   width: 100%;
-  height: 380px; /* Fixed height is required for 3D flip */
-  perspective: 1000px; /* Gives the 3D depth */
+  height: 380px;
+  perspective: 1000px;
   cursor: pointer;
 }
 
-/* The inner wrapper that actually rotates */
 .team-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy smooth flip */
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-style: preserve-3d;
 }
 
-/* Hover/Touch triggers the flip */
 .team-card:hover .team-card-inner,
 .team-card:active .team-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Common styles for Front and Back */
 .team-front,
 .team-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Hides the back side when facing away */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 20px;
   padding: 40px 20px;
@@ -824,14 +761,12 @@
   justify-content: center;
 }
 
-/* --- Card Front Styles --- */
 .team-front {
   background: rgba(13, 21, 39, 0.6);
   border: 1px solid rgba(212, 175, 55, 0.15);
   backdrop-filter: blur(10px);
 }
 
-/* Circular Image */
 .team-img-box {
   width: 130px;
   height: 130px;
@@ -852,7 +787,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #030508; /* Creates a gap effect */
+  border: 3px solid #030508;
 }
 
 .team-front h4 {
@@ -870,7 +805,6 @@
   text-transform: uppercase;
 }
 
-/* --- Card Back Styles --- */
 .team-back {
   background: linear-gradient(
     145deg,
@@ -897,7 +831,6 @@
   padding: 0 10px;
 }
 
-/* Social Icons */
 .team-social {
   display: flex;
   gap: 15px;
@@ -925,12 +858,9 @@
   box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .team-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -939,18 +869,15 @@
     padding: 80px 20px;
   }
   .team-grid {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr;
     max-width: 350px;
     gap: 30px;
   }
   .team-card {
-    height: 350px; /* Slightly smaller height for mobile */
+    height: 350px;
   }
 }
 
-/* =========================================
-   SECTION 6: SPLIT SCREEN TESTIMONIAL
-   ========================================= */
 .split-testi-section {
   padding: 100px 8%;
   background: #050810;
@@ -967,7 +894,6 @@
   margin: 0 auto;
 }
 
-/* --- Left Side: Visual Setup --- */
 .split-testi-visual {
   position: relative;
   width: 100%;
@@ -1039,7 +965,6 @@
   }
 }
 
-/* --- Right Side: Content Setup --- */
 .split-testi-content {
   position: relative;
   padding-left: 20px;
@@ -1076,7 +1001,6 @@
   border-radius: 0 16px 16px 0;
 }
 
-/* --- Review Slider Magic --- */
 .review-item {
   display: none;
   animation: fadeReviewIn 0.6s ease-in-out;
@@ -1134,7 +1058,6 @@
   font-weight: 500;
 }
 
-/* --- Advanced Touch Controls (Arrows + Dots) --- */
 .review-controls-wrapper {
   display: flex;
   align-items: center;
@@ -1148,7 +1071,6 @@
   align-items: center;
 }
 
-/* Dots */
 .slider-dot {
   width: 12px;
   height: 12px;
@@ -1167,7 +1089,6 @@
   background: rgba(212, 175, 55, 0.6);
 }
 
-/* Arrow Buttons */
 .slider-arrow {
   background: transparent;
   border: 1px solid rgba(212, 175, 55, 0.3);
@@ -1190,9 +1111,6 @@
   transform: scale(1.1);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .split-testi-container {
     grid-template-columns: 1fr;
@@ -1253,9 +1171,6 @@
   }
 }
 
-/* =========================================
-   SECTION 8: CTA / JOIN COMMUNITY
-   ========================================= */
 .cta-section {
   padding: 120px 8%;
   background: radial-gradient(
@@ -1277,7 +1192,6 @@
   margin: 0 auto;
 }
 
-/* --- Cyberpunk Typography --- */
 .neon-title {
   font-size: 3.5rem;
   color: #fff;
@@ -1295,14 +1209,12 @@
   margin-bottom: 40px;
 }
 
-/* --- Glow Buttons --- */
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
-/* Primary Button (Solid Gold) */
 .btn-glow-primary {
   display: inline-flex;
   align-items: center;
@@ -1327,7 +1239,6 @@
   color: var(--theme-gold);
 }
 
-/* Secondary Button (Outline Glow) */
 .btn-glow-secondary {
   display: inline-flex;
   align-items: center;
@@ -1353,7 +1264,6 @@
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
 }
 
-/* --- Animated Floating Background Icons --- */
 .floating-icons-bg {
   position: absolute;
   inset: 0;
@@ -1363,7 +1273,7 @@
 
 .float-icon {
   position: absolute;
-  color: rgba(212, 175, 55, 0.05); /* Extremely dull gold */
+  color: rgba(212, 175, 55, 0.05);
   font-size: 4rem;
   animation: driftFloat 10s linear infinite alternate;
 }
@@ -1414,22 +1324,18 @@
   }
 }
 
-/* --- Cyberpunk Grid Overlay --- */
 .cyber-grid-overlay {
   position: absolute;
   inset: 0;
   background-image:
     linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px; /* Adjust grid size */
+  background-size: 40px 40px;
   z-index: 2;
   pointer-events: none;
   opacity: 0.5;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .neon-title {
     font-size: 3rem;
@@ -1451,12 +1357,12 @@
   }
 
   .cta-buttons {
-    flex-direction: column; /* Stack buttons on mobile */
+    flex-direction: column;
     gap: 15px;
   }
   .btn-glow-primary,
   .btn-glow-secondary {
-    width: 100%; /* Full width buttons */
+    width: 100%;
     justify-content: center;
   }
 

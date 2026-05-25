@@ -1,4 +1,3 @@
-
 :root {
   --theme-gold: #d4af37;
   --theme-gold-light: #f3cd44;
@@ -302,7 +301,7 @@ button {
     bottom: auto;
     transform: none;
     opacity: 1;
-    margin: 0 auto 15px auto; 
+    margin: 0 auto 15px auto;
     z-index: 5;
     animation: floatMobile 4s ease-in-out infinite;
   }
@@ -333,7 +332,7 @@ button {
     font-size: 2.3rem;
     line-height: 1.25;
     margin-top: 10px;
-    word-wrap: break-word; 
+    word-wrap: break-word;
   }
 
   .hero-description {
@@ -361,7 +360,6 @@ button {
     bottom: 20px;
   }
 }
-
 
 .featured-section {
   padding: 100px 8%;
@@ -424,7 +422,7 @@ button {
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding-bottom: 20px; 
+  padding-bottom: 20px;
   scrollbar-width: none;
 }
 .games-slider::-webkit-scrollbar {
@@ -432,7 +430,7 @@ button {
 }
 
 .game-card {
-  flex: 0 0 calc(25% - 22.5px); 
+  flex: 0 0 calc(25% - 22.5px);
   min-width: 280px;
   background: rgba(13, 21, 39, 0.45);
   border: 1px solid rgba(214, 175, 55, 0.15);
@@ -467,7 +465,7 @@ button {
 }
 
 .game-card:hover .game-img-wrapper img {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .genre-tag {
@@ -552,7 +550,7 @@ button {
   }
   .game-card {
     flex: 0 0 calc(33.333% - 20px);
-  } 
+  }
 }
 
 @media (max-width: 768px) {
@@ -589,7 +587,7 @@ button {
   }
 
   .game-card {
-    flex: 0 0 250px; 
+    flex: 0 0 250px;
     scroll-snap-align: center;
   }
 }
@@ -600,7 +598,7 @@ button {
   }
   .game-card {
     flex: 0 0 85%;
-  } 
+  }
 }
 
 .about-section {
@@ -871,7 +869,7 @@ button {
 
 .categories-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr; 
+  grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
 }
@@ -903,7 +901,7 @@ button {
 .cat-img {
   width: 100%;
   height: 100%;
-  min-height: 600px; 
+  min-height: 600px;
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -951,7 +949,6 @@ button {
   margin-top: 15px;
   text-align: left;
 }
-
 
 .hex-grid {
   display: grid;
@@ -1079,7 +1076,7 @@ button {
   }
   .cat-img {
     min-height: 400px;
-  } 
+  }
 }
 
 @media (max-width: 576px) {
@@ -1089,7 +1086,7 @@ button {
   .hex-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-  } 
+  }
   .hex-wrapper {
     height: 160px;
   }
@@ -1260,7 +1257,6 @@ button {
   text-align: center;
 }
 
-/* --- 3 Counters Grid --- */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1279,27 +1275,24 @@ button {
   cursor: default;
 }
 
-/* Card Hover Effect */
 .glass-stat-card:hover {
   transform: translateY(-10px);
   border-color: var(--theme-gold);
   box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
 }
 
-/* Icon Base Style */
 .stat-icon {
   font-size: 3rem;
   color: var(--theme-gold);
   margin-bottom: 15px;
   filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
-  transition: all 0.4s ease; /* Smooth color change */
+  transition: all 0.4s ease;
 }
 
-/* Icon Hover Animation (When hovering on the card) */
 .glass-stat-card:hover .stat-icon {
-  color: #ffffff; /* Turns white */
-  filter: drop-shadow(0 0 15px #ffffff); /* White glow */
-  transform: scale(1.2) rotate(5deg); /* Slight popup and tilt */
+  color: #ffffff;
+  filter: drop-shadow(0 0 15px #ffffff);
+  transform: scale(1.2) rotate(5deg);
 }
 
 .counter {
@@ -1325,7 +1318,6 @@ button {
   font-style: italic;
 }
 
-/* --- Bottom Split Layout --- */
 .stats-details {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1333,7 +1325,6 @@ button {
   align-items: center;
 }
 
-/* --- LEFT SIDE: IMAGE HOVER FLOAT EFFECT --- */
 .stat-img-hover {
   transition:
     transform 0.5s ease,
@@ -1342,11 +1333,10 @@ button {
 }
 
 .stat-img-hover:hover {
-  transform: translateY(-15px); /* Image floats UP */
+  transform: translateY(-15px);
   box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25);
 }
 
-/* Live Status Tag on Image */
 .live-status-tag {
   position: absolute;
   top: 20px;
@@ -1385,7 +1375,6 @@ button {
   }
 }
 
-/* --- RIGHT SIDE: NEON PROGRESS BARS CARD --- */
 .stats-bars {
   background: rgba(5, 8, 16, 0.6);
   padding: 40px;
@@ -1396,7 +1385,6 @@ button {
   overflow: hidden;
 }
 
-/* Floating effect for the Progress Bars Card */
 .stats-bars:hover {
   transform: translateY(-10px);
   border-color: var(--theme-gold);
@@ -1457,9 +1445,6 @@ button {
   transition: width 1.5s ease-in-out;
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 992px) {
   .stats-details {
     grid-template-columns: 1fr;
@@ -1486,9 +1471,6 @@ button {
   }
 }
 
-/* =========================================
-   SECTION 7: TESTIMONIALS
-   ========================================= */
 .testimonials-section {
   padding: 100px 8%;
   background: var(--bg-navy);
@@ -1512,15 +1494,14 @@ button {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding: 20px 0;
-  scrollbar-width: none; /* Hides scrollbar on Firefox */
+  scrollbar-width: none;
   flex: 1;
 }
 
 .testi-slider::-webkit-scrollbar {
-  display: none; /* Hides scrollbar on Chrome/Safari */
+  display: none;
 }
 
-/* --- Dark Transparent Cards --- */
 .testi-card {
   flex: 0 0 calc(33.333% - 20px);
   min-width: 320px;
@@ -1541,7 +1522,6 @@ button {
   box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
 }
 
-/* Background Quote Icon */
 .quote-bg {
   position: absolute;
   top: 20px;
@@ -1557,7 +1537,6 @@ button {
   transform: scale(1.1);
 }
 
-/* User Profile Setup */
 .testi-header {
   display: flex;
   align-items: center;
@@ -1607,7 +1586,6 @@ button {
   z-index: 1;
 }
 
-/* Slider Buttons */
 .testi-btn {
   background: rgba(13, 21, 39, 0.8);
   border: 1px solid var(--theme-gold);
@@ -1630,9 +1608,6 @@ button {
   box-shadow: 0 0 15px var(--theme-gold);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 1024px) {
   .testi-card {
     flex: 0 0 calc(50% - 15px);
@@ -1644,7 +1619,6 @@ button {
     padding: 80px 5%;
   }
 
-  /* Move buttons below the slider on mobile */
   .testi-wrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -1665,9 +1639,6 @@ button {
   }
 }
 
-/* =========================================
-   SECTION 7: 3D TESTIMONIALS STACK
-   ========================================= */
 .testimonials-section {
   padding: 100px 8%;
   background: var(--bg-navy);
@@ -1685,7 +1656,6 @@ button {
   align-items: center;
 }
 
-/* Container height adjusted to remove extra gap */
 .stack-area {
   position: relative;
   width: 100%;
@@ -1696,14 +1666,12 @@ button {
   perspective: 1000px;
 }
 
-/* --- 3D Card Setup --- */
 .testi-3d-card {
   position: absolute;
   width: 450px;
   background: rgba(13, 21, 39, 0.6);
   border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: 20px;
-  /* Reduced inner top/bottom padding to remove empty space */
   padding: 25px 30px;
   backdrop-filter: blur(15px);
   transition:
@@ -1715,7 +1683,6 @@ button {
   cursor: pointer;
 }
 
-/* Background Quote Icon */
 .quote-bg {
   position: absolute;
   top: 15px;
@@ -1725,7 +1692,6 @@ button {
   z-index: -1;
 }
 
-/* Card Inner Content Setup */
 .testi-header {
   display: flex;
   align-items: center;
@@ -1764,7 +1730,6 @@ button {
   font-style: italic;
 }
 
-/* --- 3D Slider Controls --- */
 .stack-controls {
   display: flex;
   gap: 20px;
@@ -1792,27 +1757,21 @@ button {
   box-shadow: 0 0 15px var(--theme-gold);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE
-   ========================================= */
 @media (max-width: 768px) {
   .testimonials-section {
     padding: 80px 5%;
   }
 
   .stack-area {
-    height: 300px; /* Adjusted for mobile */
+    height: 300px;
   }
 
   .testi-3d-card {
-    width: 85%; /* Ensures side gaps so it doesn't touch the screen edge */
+    width: 85%;
     max-width: 320px;
-    padding: 20px 20px; /* Tighter padding for mobile screen */
+    padding: 20px 20px;
   }
 }
-/* =========================================
-   SECTION 8: DOWNLOAD APP (FULL FIXED)
-   ========================================= */
 .download-section {
   padding: 100px 8%;
   background: radial-gradient(
@@ -1831,7 +1790,6 @@ button {
   align-items: center;
 }
 
-/* --- Floating Mockup (Cursor Hover Only) --- */
 .phone-mockup {
   position: relative;
   width: 340px;
@@ -1843,14 +1801,12 @@ button {
     0 0 50px rgba(0, 0, 0, 0.5),
     0 0 20px rgba(212, 175, 55, 0.2);
   overflow: hidden;
-  /* Transition for smooth hover effect */
   transition:
     transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
     box-shadow 0.6s ease;
   cursor: pointer;
 }
 
-/* Hover Effect: Moves up only when cursor touches */
 .phone-mockup:hover {
   transform: translateY(-25px) !important;
   box-shadow: 0 30px 60px rgba(212, 175, 55, 0.4);
@@ -1862,7 +1818,6 @@ button {
   object-fit: cover;
 }
 
-/* --- Feature List Styling --- */
 .feature-list {
   list-style: none;
   margin: 30px 0;
@@ -1889,7 +1844,6 @@ button {
   display: block;
 }
 
-/* --- Download Buttons --- */
 .store-buttons {
   display: flex;
   gap: 20px;
@@ -1929,7 +1883,6 @@ button {
   color: var(--bg-navy);
 }
 
-/* --- Mobile Responsive Fixes --- */
 @media (max-width: 992px) {
   .download-container {
     grid-template-columns: 1fr;
@@ -1937,7 +1890,6 @@ button {
     text-align: center;
   }
 
-  /* Feature List fix: Mobile-la content center aaga koodadhu, left-ah irukkanum */
   .feature-list {
     display: flex;
     flex-direction: column;
@@ -1946,7 +1898,6 @@ button {
     margin: 30px auto;
   }
 
-  /* Center the Store Buttons */
   .store-buttons {
     justify-content: center;
     flex-wrap: wrap;
@@ -1959,7 +1910,6 @@ button {
   }
 }
 
-/* Extra small screens fix */
 @media (max-width: 480px) {
   .btn-store {
     padding: 12px 15px;
@@ -1969,9 +1919,6 @@ button {
   }
 }
 
-/* =========================================
-   SECTION 9: NEWSLETTER CTA (CYBERPUNK)
-   ========================================= */
 .newsletter-section {
   padding: 100px 8%;
   background: #030508;
@@ -1980,7 +1927,6 @@ button {
   text-align: center;
 }
 
-/* Animated Grid Background */
 .grid-overlay {
   position: absolute;
   inset: 0;
@@ -1998,7 +1944,6 @@ button {
   margin: 0 auto;
 }
 
-/* Newsletter Form */
 .newsletter-form {
   display: flex;
   gap: 15px;
@@ -2043,7 +1988,6 @@ button {
   transform: translateY(-5px);
 }
 
-/* Privacy Note */
 .newsletter-note {
   margin-top: 25px;
   color: var(--text-muted);
@@ -2058,7 +2002,6 @@ button {
   color: var(--theme-gold);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .newsletter-form {
     flex-direction: column;
@@ -2069,9 +2012,6 @@ button {
   }
 }
 
-/* =========================================
-   FOOTER SECTION (FULL REFIXED)
-   ========================================= */
 .footer {
   background: #050810;
   padding: 80px 8% 20px;
@@ -2085,7 +2025,6 @@ button {
   margin-bottom: 50px;
 }
 
-/* Brand & Description */
 .footer-logo .logo-text {
   color: var(--text-light);
   font-family: "Orbitron";
@@ -2127,7 +2066,7 @@ button {
   font-family: "Orbitron";
 }
 .footer-section ul {
-  list-style: none; 
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -2189,7 +2128,6 @@ button {
   color: var(--bg-navy);
 }
 
-/* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(212, 175, 55, 0.1);
   padding-top: 30px;
@@ -2210,7 +2148,6 @@ button {
   color: var(--theme-gold);
 }
 
-/* Mobile Responsive */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
@@ -2239,9 +2176,6 @@ button {
   }
 }
 
-/* =========================================
-   NEW LOGO IMAGE STYLES
-   ========================================= */
 .logo {
   display: flex;
   align-items: center;
@@ -2254,14 +2188,13 @@ button {
 }
 
 .brand-logo-img {
-  height: 38px; /* டெஸ்க்டாப் வியூவிற்கான கச்சிதமான உயரம் */
-  width: auto; /* லோகோ ரேஷியோ மாறாமல் இருக்க */
+  height: 38px;
+  width: auto;
   display: block;
   object-fit: contain;
   transition: filter 0.3s ease;
 }
 
-/* லோகோ மேல் மவுஸ் வைக்கும்போது லைட்டா க்ளோ ஆக */
 .logo-link:hover {
   transform: scale(1.02);
 }
@@ -2270,11 +2203,8 @@ button {
   filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
 }
 
-/* =========================================
-   MOBILE RESPONSIVE FOR LOGO
-   ========================================= */
 @media (max-width: 768px) {
   .brand-logo-img {
-    height: 30px; /* மொபைல் போன் ஸ்க்ரீன்களுக்கு ஏத்த மாதிரி சின்னதாகும் */
+    height: 30px;
   }
 }
