@@ -2102,7 +2102,18 @@ button {
 .contact-info li span {
   word-break: break-all;
 }
+.logo {
+  transition: all 0.3s ease;
+}
 
+.logo img {
+  width: 138px;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+}
 .footer-form {
   display: flex;
   gap: 5px;
