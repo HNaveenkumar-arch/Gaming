@@ -286,3 +286,11 @@ body {
     overflow: hidden;
 }
 }
+
+.btn-hover1{
+  transition: all 0.3s ease;
+}
+.btn-hover1:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px rgba(219, 171, 12, 0.781);
+}
