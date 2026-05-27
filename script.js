@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             menuWrapper.classList.toggle('active-menu');
             burger.classList.toggle('toggle-burger-active');
+            document.body.classList.toggle("no-scroll");
 
             const lines = burger.querySelectorAll('div');
             if (burger.classList.contains('toggle-burger-active')) {
@@ -44,12 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menuWrapper.classList.contains('active-menu') && !menuWrapper.contains(e.target) && !burger.contains(e.target)) {
                 menuWrapper.classList.remove('active-menu');
                 burger.classList.remove('toggle-burger-active');
+                document.body.classList.toggle("no-scroll");
                 const lines = burger.querySelectorAll('div');
                 lines[0].style.transform = 'none';
                 lines[1].style.opacity = '1';
                 lines[2].style.transform = 'none';
             }
         });
+        
     }
 
     let slideIndex = 0;
@@ -253,3 +256,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+

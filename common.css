@@ -149,6 +149,7 @@ body {
   align-items: center;
   gap: 8px;
   letter-spacing: 1px;
+  flex: 1;
 }
 
 .nav-menu-wrapper {
@@ -156,14 +157,17 @@ body {
   align-items: center;
   gap: 30px;
 }
-
+ 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 5px;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
 .nav-item {
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -198,6 +202,7 @@ body {
   font-size: 0.85rem;
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
+  margin-left: 0;
 }
 
 .login-btn:hover {
@@ -236,7 +241,7 @@ body {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     flex-direction: column;
-    width: 280px;
+    width: 100%;
     padding: 100px 30px;
     gap: 25px;
     justify-content: flex-start;
@@ -254,6 +259,9 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    margin: 0;
+    position: static; 
+    transform: none;
   }
 
   .burger {
@@ -272,5 +280,9 @@ body {
     padding: 14px;
     font-size: 0.95rem;
     margin-top: 15px;
+    margin-left: 0;
   }
+  .no-scroll {
+    overflow: hidden;
+}
 }
