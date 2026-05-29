@@ -2058,14 +2058,14 @@ button:disabled {
 
 .footer {
   background: #050810;
-  padding: 80px 8% 20px;
+  padding: 80px 5% 20px;
   border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
+  grid-template-columns: auto auto auto auto;
+  gap: 70px;
   margin-bottom: 50px;
 }
 
