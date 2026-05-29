@@ -130,7 +130,7 @@
   background-size: 300%;
   animation: btnBorderGlow 3s linear infinite;
   text-decoration: none;
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 @keyframes btnBorderGlow {
@@ -149,7 +149,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(13, 21, 39, 0.95); /* Deep Navy Inner */
+  background: rgba(13, 21, 39, 0.95);
   color: var(--theme-gold);
   padding: 16px 35px;
   border-radius: 6px;
@@ -169,6 +169,21 @@
 .btn-cyber-glow:hover .btn-inner {
   background: var(--theme-gold);
   color: #030508;
+}
+
+.btn-cyber-glow:not(:disabled):not([disabled]):active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-cyber-glow:disabled,
+.btn-cyber-glow[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  animation: none;
+  box-shadow: none;
 }
 
 .service-hero-visual {
@@ -422,13 +437,25 @@
   margin-top: 20px;
   cursor: pointer;
   font-family: "Orbitron", sans-serif;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-cancel-match:hover {
   background: rgba(255, 0, 85, 0.2);
   color: #ff0055;
   border-color: #ff0055;
+}
+
+.btn-cancel-match:not(:disabled):active {
+  transform: scale(0.98);
+  background: rgba(255, 0, 85, 0.3);
+}
+
+.btn-cancel-match:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
 }
 
 .mp-visual {
@@ -657,6 +684,7 @@
   margin-bottom: 15px;
   text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
 }
+
 .btn-join {
   background: transparent;
   border: 1px solid var(--theme-gold);
@@ -665,8 +693,7 @@
   border-radius: 6px;
   cursor: pointer;
   font-family: "Orbitron", sans-serif;
-  transition: 0.3s;
-
+  transition: all 0.3s ease;
   display: block;
   margin: 20px auto 0 auto;
   width: fit-content;
@@ -675,6 +702,20 @@
 .btn-join:hover {
   background: var(--theme-gold);
   color: #030508;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-join:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+}
+
+.btn-join:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
 }
 
 @media (max-width: 992px) {
@@ -951,6 +992,10 @@
   margin: 0 auto;
   display: block;
   width: 100%;
+}
+
+.reward-card .btn-join:not(:disabled):active {
+  transform: scale(0.98);
 }
 
 @media (max-width: 992px) {
@@ -1252,11 +1297,27 @@
   border-radius: 8px;
   cursor: pointer;
   font-size: 1.2rem;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
+
 .send-btn:hover {
   transform: scale(1.05);
   background: #fff;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+}
+
+.send-btn:not(:disabled):active {
+  transform: scale(0.95);
+  background: var(--theme-gold);
+  box-shadow: none;
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  transform: none;
 }
 
 @media (max-width: 992px) {
@@ -1439,7 +1500,7 @@
   border-radius: 8px;
   text-decoration: none;
   animation: navyGoldGlow 4s linear infinite;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
@@ -1452,7 +1513,7 @@
   font-family: "Orbitron", sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn-navy-gold-glow:hover {
@@ -1463,6 +1524,21 @@
 .btn-navy-gold-glow:hover .btn-text {
   background: var(--theme-gold, #d4af37);
   color: #0d1527;
+}
+
+.btn-navy-gold-glow:not(:disabled):not([disabled]):active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.btn-navy-gold-glow:disabled,
+.btn-navy-gold-glow[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  animation: none;
+  box-shadow: none;
 }
 
 @keyframes navyGoldGlow {
@@ -1484,7 +1560,7 @@
   font-weight: 800;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   box-shadow:
     inset 0 0 10px rgba(212, 175, 55, 0.2),
     0 0 10px rgba(212, 175, 55, 0.2);
@@ -1496,6 +1572,21 @@
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
   transform: translateY(-5px);
 }
+
+.btn-gold-outline:not(:disabled):not([disabled]):active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+.btn-gold-outline:disabled,
+.btn-gold-outline[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  box-shadow: none;
+}
+
 
 @media (max-width: 992px) {
   .cta-title {

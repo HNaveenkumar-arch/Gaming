@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./asset/yellow_logo11.webp">
     <title>404 - Mission Failed | Gaming Hub</title>
+    <link rel="stylesheet" href="./style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;700&display=swap"
         rel="stylesheet">
@@ -221,7 +222,7 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 8px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
             cursor: pointer;
             flex: 1;
@@ -243,6 +244,20 @@
             transform: translateX(-5px);
         }
 
+        .btn-go-back:not(:disabled):not([disabled]):active {
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-go-back:disabled,
+        .btn-go-back[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(100%);
+            box-shadow: none;
+        }
+
         .btn-go-home {
             display: inline-flex;
             align-items: center;
@@ -257,7 +272,7 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 8px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             flex: 1;
             min-width: 180px;
@@ -276,6 +291,20 @@
 
         .btn-go-home:hover i {
             transform: scale(1.2);
+        }
+
+        .btn-go-home:not(:disabled):not([disabled]):active {
+            transform: scale(0.95);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-go-home:disabled,
+        .btn-go-home[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(100%);
+            box-shadow: none;
         }
 
         @media (max-width: 768px) {

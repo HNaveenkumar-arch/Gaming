@@ -254,6 +254,20 @@ h2 {
   box-shadow: 0 5px 20px rgba(214, 175, 55, 0.3);
 }
 
+.auth-submit-btn:not(:disabled):active {
+  transform: scale(0.98); 
+  box-shadow: 0 2px 10px rgba(214, 175, 55, 0.2);
+}
+
+.auth-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  box-shadow: none;
+  transform: none;
+}
+
 .social-auth-divider {
   text-align: center;
   margin: 25px 0 15px 0;

@@ -1,10 +1,21 @@
+*:focus-visible {
+  outline: 2px dashed var(--theme-gold, #d4af37) !important;
+  outline-offset: 5px !important;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  border-radius: 4px; 
+}
+
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
 :root {
   --theme-gold: #d4af37;
   --theme-gold-light: #f3cd44;
   --theme-gold-dark: #b38f1b;
   --bg-navy: #050810;
   --text-light: #f8f9fa;
-  --text-muted: #8fa0c4;
+  --text-muted: #adbcdb;
 }
 
 .hero-section {
@@ -28,10 +39,13 @@
   z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(5, 8, 16, 0.98) 0%,
-    rgba(5, 8, 16, 0.85) 40%,
-    rgba(5, 8, 16, 0.6) 100%
+    rgba(5, 8, 16, 0.95) 0%,
+    rgba(5, 8, 16, 0.8) 50%,
+    rgba(5, 8, 16, 0.5) 100%
   );
+  /* The secret weapon for video backgrounds: blurs the video slightly */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .bg-video {
   width: 100%;
@@ -138,7 +152,9 @@
   color: var(--text-light);
   line-height: 1.1;
   text-transform: uppercase;
-  text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.9);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 8px 20px rgba(0, 0, 0, 0.7);
 }
 .text-gold {
   color: var(--theme-gold);
@@ -151,7 +167,9 @@
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 600px;
-  text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.9),
+    0 4px 10px rgba(0, 0, 0, 0.5);
   font-weight: 500;
 }
 
@@ -171,8 +189,22 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   border: none;
+}
+
+button:not(:disabled):active,
+.btn-gold-glow:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* NEW: Disabled State (Button work aagatha pothu opacity kuraikka) */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
 }
 
 .btn-gold-glow {
@@ -285,9 +317,12 @@ button {
   .video-overlay {
     background: linear-gradient(
       180deg,
-      rgba(5, 8, 16, 0.6) 0%,
-      rgba(5, 8, 16, 0.95) 80%
+      rgba(5, 8, 16, 0.85) 0%,
+      rgba(5, 8, 16, 0.9) 50%,
+      rgba(5, 8, 16, 0.98) 100%
     );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
 
   .hero-slider-container {

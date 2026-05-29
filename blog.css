@@ -168,7 +168,6 @@
   margin-bottom: 20px;
   line-height: 1.4;
 }
-
 .btn-navy-gold-small {
   display: inline-flex;
   align-items: center;
@@ -181,13 +180,29 @@
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease; 
 }
+
 .btn-navy-gold-small:hover {
   background: var(--theme-gold);
   color: #0d1527;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
 }
 
+.btn-navy-gold-small:not(:disabled):active {
+  transform: scale(0.95);
+  background: rgba(212, 175, 55, 0.8);
+  color: #0d1527;
+  box-shadow: none;
+}
+
+.btn-navy-gold-small:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; 
+  filter: grayscale(100%);
+}
 .mobile-slider-controls {
   display: none;
 }
@@ -468,7 +483,7 @@
   border-radius: 50%;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,6 +493,23 @@
   background: var(--theme-gold);
   color: #030508;
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.fb-btn:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: none; 
+  background: rgba(212, 175, 55, 0.8);
+  color: #030508;
+}
+
+
+.fb-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; 
+  filter: grayscale(100%);
+  border-color: #666; 
 }
 
 @media (max-width: 992px) {
@@ -645,7 +677,7 @@
   font-weight: 700;
   text-decoration: none;
   font-family: "Orbitron", sans-serif;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   width: fit-content;
 }
 
@@ -659,7 +691,20 @@
 }
 
 .btn-read-more:hover i {
-  transform: translateX(8px);
+  transform: translateX(8px); 
+}
+
+.btn-read-more:not(:disabled):not([disabled]):active {
+  transform: scale(0.95); 
+  color: #b5952f; 
+}
+
+.btn-read-more:disabled,
+.btn-read-more[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; 
+  filter: grayscale(100%);
 }
 
 @media (max-width: 1100px) {
@@ -1313,7 +1358,7 @@
   font-size: 1rem;
   font-weight: 800;
   cursor: pointer;
-  transition: 0.4s;
+  transition: all 0.4s ease;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   animation: bgShiftBtn 4s infinite linear;
 }
@@ -1323,6 +1368,20 @@
   color: #030508;
   box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
   text-shadow: none;
+}
+
+.nl-submit-btn:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.nl-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  animation: none;
+  box-shadow: none;
 }
 
 @keyframes bgShiftBtn {

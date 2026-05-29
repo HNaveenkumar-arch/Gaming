@@ -210,6 +210,19 @@ body {
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
+.login-btn:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+}
+
+.login-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  box-shadow: none;
+}
+
 .nav-right-controls {
   display: flex;
   align-items: center;
@@ -286,11 +299,24 @@ body {
     overflow: hidden;
 }
 }
-
-.btn-hover1{
+.btn-hover1 {
   transition: all 0.3s ease;
 }
-.btn-hover1:hover{
+
+.btn-hover1:hover {
   transform: translateY(-6px);
   box-shadow: 0 4px 15px rgba(219, 171, 12, 0.781);
+}
+
+.btn-hover1:not(:disabled):active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(219, 171, 12, 0.4);
+}
+
+.btn-hover1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(100%);
+  box-shadow: none;
 }

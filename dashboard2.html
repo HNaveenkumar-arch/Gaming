@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./asset/yellow_logo11.webp">
     <title>Admin Core | Stackly</title>
+    <link rel="stylesheet" href="./style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet">
@@ -105,28 +106,42 @@
         }
 
         .logout-btn {
-            background: rgba(255, 0, 85, 0.1);
-            border: 1px solid var(--neon-red);
-            color: var(--neon-red);
-            padding: 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: 0.3s;
-            width: 100%;
-            font-family: 'Orbitron';
-            font-weight: 700;
-            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-        }
+    background: rgba(255, 0, 85, 0.1);
+    border: 1px solid var(--neon-red);
+    color: var(--neon-red);
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
 
-        .logout-btn:hover {
-            background: var(--neon-red);
-            color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
-            transform: translateY(-2px);
-        }
+.logout-btn:hover {
+    background: var(--neon-red);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+    transform: translateY(-2px);
+}
+
+.logout-btn:not(:disabled):active {
+    transform: scale(0.98);
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.3);
+}
+
+.logout-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(100%);
+    box-shadow: none;
+    transform: none;
+}
 
         .main-content {
             flex: 1;
