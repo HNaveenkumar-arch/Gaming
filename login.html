@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="./asset/logo_Favicon.webp">
     <title>Stackly Gaming | Login</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="common.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -539,6 +539,17 @@
 </head>
 
 <body>
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-scanner-box">
+            <div class="preloader-circle-radar"></div>
+            <div class="brand-text-matrix">
+                <i class="fa-solid fa-layer-group preloader-neon-icon"></i>
+                <h1 class="preloader-glitch-text">STACKLY</h1>
+                <p class="preloader-sub">INITIALIZING NODE SYSTEM...</p>
+            </div>
+        </div>
+    </div>
+    <div id="mainApp" class="app-hidden">
 
     <div class="auth-wrapper">
         <div class="content-box">
@@ -673,6 +684,7 @@
             </div>
         </div>
     </div>
+    </div>
 
     <script>
         function selectRole(role) {
@@ -768,6 +780,7 @@
             }
         });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
